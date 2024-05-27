@@ -22,8 +22,9 @@
 - 로그인하는 유저별로 다르게 dashboard 보여줄려면 DB table 어떻게 짤지 고민하기 -> userid 일치여부로 구현함!
 ### 다음 작업예정
 - 코드구조 뜯어보고 깔끔하게 정리해서 보일러플레이트로 만들기
-- google, github로 로그인
 - url 저장 형태로 UI, DB 구축하기
+- google, github로 로그인
+- 편집용이 아닌 배포용 dashboard 구현문제
 
 ### 테스트용 배포주소
 https://linkport-nextjs-try.vercel.app/
