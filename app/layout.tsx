@@ -43,7 +43,7 @@ export default function RootLayout({
           <nav className="w-full flex justify-center border-b border-b-foreground/10 h-16">
             <div className="w-full max-w-4xl flex justify-between items-center p-3 text-sm">
               <HomeButton />
-              <Link className="bg-blue-300 p-2 rounded" href={"/notes"}>Get Started</Link>
+              {/* <Link className="bg-blue-300 p-2 rounded" href={"/notes"}>Get Started</Link> */}
               {isSupabaseConnected && <AuthButton />}
             </div>
           </nav>

@@ -1,3 +1,4 @@
+// submit-button.tsx
 "use client";
 
 import { useFormStatus } from "react-dom";
@@ -8,6 +9,7 @@ type Props = ComponentProps<"button"> & {
 };
 
 export function SubmitButton({ children, pendingText, ...props }: Props) {
+  // pending : true일때 로딩중
   const { pending, action } = useFormStatus();
 
   const isPending = pending && action === props.formAction;

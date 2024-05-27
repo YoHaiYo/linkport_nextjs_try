@@ -3,15 +3,21 @@
 // import { createClient } from '../../utils/supabase/server'; // @는 app폴더 밖을 의미
 import { createClient } from '@/utils/supabase/client'; // @는 app폴더 밖을 의미
 import { useState, useEffect } from 'react';
+// import { redirect } from "next/navigation";
+
 import './style/style.css';
 
+const supabase = createClient();
+
+
 export default function Notes() {
+  // const supabase = createClient();
+  // const [user, setUser] = useState(null);
+
   const [notes, setNotes] = useState([]);
   const [updateNoteId, setUpdateNoteId] = useState(null);
   const [newTitle, setNewTitle] = useState("");
   const [addTitle, setAddTitle] = useState("");
-
-  const supabase = createClient();
 
   // Fetch notes on component mount
   useEffect(() => {
