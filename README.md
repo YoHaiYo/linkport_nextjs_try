@@ -4,7 +4,7 @@
 - 서버사이드 랜더링시 다음 이용 : import { createClient } from '@/utils/supabase/server'
 - 로그인은 진짜 이메일 인증해야 로그인가능함 ! 
 - 로그인 성공시 페이지 활성 코드 (/app/protected/page 참고) but, async~await는 클라이언트 사이드에서 허용이 안되서 저대로는 못씀.
-<code>
+```
  const supabase = createClient();
 
   const {
@@ -14,8 +14,7 @@
   if (!user) {
     return redirect("/login");
   }
-</code>
-
+```
 - 테스트용 관리자 아이디 : test@test / 비번 : 4자리
 - 로그인 해야만 dashboard 페이지 나오게 구현. server 사이드로 위의 로그인성공시 활성코드 쓰고 import로 보드 페이지 불러오면됨..!
 - /notes 페이지는 url로 들어가면 안되니까 (notes)로 폴더명변경. 경로설정시에도 괄호붙여야됨.
