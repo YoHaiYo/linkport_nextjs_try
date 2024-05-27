@@ -18,6 +18,7 @@
 
 - 테스트용 관리자 아이디 : test@test / 비번 : 4자리
 - 로그인 해야만 dashboard 페이지 나오게 구현. server 사이드로 위의 로그인성공시 활성코드 쓰고 import로 보드 페이지 불러오면됨..!
+- /notes 페이지는 url로 들어가면 안되니까 (notes)로 폴더명변경. 경로설정시에도 괄호붙여야됨.
 
 ### 테스트용 배포주소
 https://linkport-nextjs-try.vercel.app/
