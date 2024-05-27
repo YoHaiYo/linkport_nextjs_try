@@ -95,11 +95,11 @@ export default function Notes({ userid, useremail }) {
           onChange={(e) => setAddTitle(e.target.value)}
           placeholder="Add a new note"
         />
-        <button className='Write' onClick={handleAdd}>Add</button>
+        <button className='Write px-2' onClick={handleAdd}>Add</button>
       </div>
       {notes.map((note, idx) => (
-        <div key={note.id} className='flex justify-between'>
-          <p>{idx + 1}){note.title}</p>
+        <div key={note.id} className='flex justify-between border-b'>
+          <p className=''>{idx + 1}){note.title}</p>
           {/* <p>{note.title}</p> */}
           {updateNoteId === note.id ? (
             <>
@@ -118,8 +118,8 @@ export default function Notes({ userid, useremail }) {
           ) : (
             <>
               <div className='flex'>
-                <button className='Edit' onClick={() => setUpdateNoteId(note.id)}>Edit</button>
-                <button className='Delete' onClick={() => handleDelete(note.id)}>Delete</button>
+                <button className='Edit px-2 mx-1 bg-blue-300' onClick={() => setUpdateNoteId(note.id)}>Edit</button>
+                <button className='Delete px-2 mx-1' onClick={() => handleDelete(note.id)}>Delete</button>
               </div>
             </>
           )}
