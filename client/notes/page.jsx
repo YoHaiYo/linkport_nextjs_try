@@ -10,7 +10,7 @@ import './style/style.css';
 const supabase = createClient();
 
 
-export default function Notes() {
+export default function Notes({ userid }) {
   // const supabase = createClient();
   // const [user, setUser] = useState(null);
 
@@ -84,6 +84,9 @@ export default function Notes() {
 
   return (
     <div id='note'>
+      <h1 className='font-bold' style={{ color: "blue" }}>userID : {userid}</h1>
+
+
       <h1 className='font-bold'>My Notes</h1>
       <div className='flex mb-3 '>
         <input

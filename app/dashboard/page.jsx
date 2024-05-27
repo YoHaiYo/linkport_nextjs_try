@@ -13,9 +13,12 @@ export default async function DashboardPage() {
     data: { user },
   } = await supabase.auth.getUser();
 
+  console.log("userdata : ", user.id)
+
   if (!user) {
     return redirect("/login");
   }
+
 
   return (
     <div className="flex-1 w-full flex flex-col gap-20 items-center">
@@ -25,7 +28,7 @@ export default async function DashboardPage() {
           user
         </div>
       </div>
-      <Notes />
+      <Notes userid={user.id} />
 
     </div>
   );
