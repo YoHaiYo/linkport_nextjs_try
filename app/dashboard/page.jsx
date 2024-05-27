@@ -28,7 +28,7 @@ export default async function DashboardPage() {
           user
         </div>
       </div>
-      <Notes userid={user.id} />
+      <Notes userid={user.id} useremail={user.email} />
 
     </div>
   );

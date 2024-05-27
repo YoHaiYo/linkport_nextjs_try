@@ -8,7 +8,7 @@ const tablename = "notes" // 여기서 supabase 테이블명 일괄조절하기
 
 const supabase = createClient();
 
-export default function Notes({ userid }) {
+export default function Notes({ userid, useremail }) {
   const [notes, setNotes] = useState([]);
   const [updateNoteId, setUpdateNoteId] = useState(null);
   const [newTitle, setNewTitle] = useState("");
@@ -72,7 +72,7 @@ export default function Notes({ userid }) {
   const handleAdd = async () => {
     const { data, error } = await supabase
       .from(tablename)
-      .insert([{ title: addTitle, userid }])  // Add userid to the new note
+      .insert([{ title: addTitle, userid, useremail }])  // Add userid to the new note
       .select();
 
     if (error) {
@@ -85,7 +85,7 @@ export default function Notes({ userid }) {
 
   return (
     <div id='note'>
-      {/* <h1 className='font-bold' style={{ color: "blue" }}>userID : {userid}</h1> */}
+      <h1 className='font-bold' style={{ color: "blue" }}>useremail : {useremail}</h1>
       <h1 className='font-bold'>My Notes</h1>
       <div className='flex mb-3 '>
         <input
