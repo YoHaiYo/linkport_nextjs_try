@@ -4,6 +4,7 @@ import { createClient } from "@/utils/supabase/server";
 import ConnectSupabaseSteps from "@/components/tutorial/ConnectSupabaseSteps";
 import SignUpUserSteps from "@/components/tutorial/SignUpUserSteps";
 import Header from "@/components/Header";
+import Link from "next/link";
 
 export default async function Index() {
   const canInitSupabaseClient = () => {
@@ -24,6 +25,7 @@ export default async function Index() {
       <nav className="w-full flex justify-center border-b border-b-foreground/10 h-16">
         <div className="w-full max-w-4xl flex justify-between items-center p-3 text-sm">
           <DeployButton />
+          <Link className="bg-blue-300 p-2 rounded" href={"/notes"}>Get Started</Link>
           {isSupabaseConnected && <AuthButton />}
         </div>
       </nav>
