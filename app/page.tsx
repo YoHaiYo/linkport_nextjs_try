@@ -31,10 +31,10 @@ export default async function Index() {
         <main className="flex-1 flex flex-col mt-3">
 
           <h3 className="font-bold text-3xl mb-1">Github</h3>
-          <a href="https://github.com/YoHaiYo/linkport_nextjs_try" className="mb-5">https://github.com/YoHaiYo/linkport_nextjs_try</a>
+          <a href="https://github.com/YoHaiYo/linkport_nextjs_try" target="_blank" className="mb-5">https://github.com/YoHaiYo/linkport_nextjs_try</a>
 
           <h3 className="font-bold text-3xl mb-1">Deploy</h3>
-          <a href="https://linkport-nextjs-try.vercel.app/" className="mb-5">https://linkport-nextjs-try.vercel.app/</a>
+          <a href="https://linkport-nextjs-try.vercel.app/" target="_blank" className="mb-5">https://linkport-nextjs-try.vercel.app/</a>
 
         </main>
       </div>
