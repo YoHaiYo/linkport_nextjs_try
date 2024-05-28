@@ -95,31 +95,40 @@ export default function Notes({ userid, useremail }) {
           onChange={(e) => setAddTitle(e.target.value)}
           placeholder="Add a new note"
         />
-        <button className='Write px-2' onClick={handleAdd}>Add</button>
+        <button className='write px-2' onClick={handleAdd}>Add</button>
       </div>
       {notes.map((note, idx) => (
         <div key={note.id} className='flex justify-between border-b'>
-          <p className=''>{idx + 1}){note.title}</p>
-          {/* <p>{note.title}</p> */}
           {updateNoteId === note.id ? (
             <>
+              {/* Edit 누른 후 */}
               <div className='flex'>
+                <p>{idx + 1})</p>
                 <input
                   className='border'
-                  style={{ width: 100 }}
+                  style={{ width: 200 }}
                   type="text"
                   value={newTitle}
                   onChange={(e) => setNewTitle(e.target.value)}
-                  placeholder="New title"
+                  placeholder={note.title}
                 />
-                <button className='Update' onClick={() => handleUpdate(note.id)}>Update</button>
+                <button className='update' onClick={() => handleUpdate(note.id)}>Update</button>
+                <button className='delete px-2 mx-1' onClick={() => handleDelete(note.id)}>Delete</button>
               </div>
             </>
           ) : (
             <>
+              {/* Edit 누르기 전 */}
               <div className='flex'>
-                <button className='Edit px-2 mx-1 bg-blue-300' onClick={() => setUpdateNoteId(note.id)}>Edit</button>
-                <button className='Delete px-2 mx-1' onClick={() => handleDelete(note.id)}>Delete</button>
+                <p>{idx + 1})</p>
+                <div style={{ width: 200 }}>{note.title}</div>
+                <div className='flex'>
+                  <button className='edit px-2 mx-1' onClick={() => {
+                    setUpdateNoteId(note.id);
+                    setNewTitle(note.title);
+                  }}>Edit</button>
+                  <button className='delete px-2 mx-1' onClick={() => handleDelete(note.id)}>Delete</button>
+                </div>
               </div>
             </>
           )}

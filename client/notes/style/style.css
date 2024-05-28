@@ -3,12 +3,15 @@
   border-radius: 0.2rem;
   color: white;
 }
-#note .Write {
+#note .write {
   background-color: slateblue;
 }
-#note .Delete {
+#note .edit {
+  background-color: skyblue;
+}
+#note .delete {
   background-color: salmon;
 }
-#note .Update {
+#note .update {
   background-color: seagreen;
 }
