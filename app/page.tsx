@@ -10,7 +10,7 @@ import HomeButton from "@/components/HomeButton";
 export default async function Index() {
   const canInitSupabaseClient = () => {
     // This function is just for the interactive tutorial.
-    // Feel free to remove it once you have Supabase connected.
+    // Feel free to remove it once you have Supabase connected.  
     try {
       createClient();
       return true;
@@ -26,7 +26,7 @@ export default async function Index() {
 
       <div className="animate-in flex-1 flex flex-col opacity-0 max-w-4xl px-3">
         {/* <Header /> */}
-        <h3 className="font-bold text-xl my-3">링크 보관소 프로젝트 제작중...</h3>
+        <h3 className="font-bold text-xl my-3">링크보관소 프로젝트 제작중....</h3>
 
         <main className="flex-1 flex flex-col mt-3">
 

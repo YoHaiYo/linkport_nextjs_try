@@ -53,7 +53,7 @@ export default function Login({
     return redirect("/login?message=Check_email_to_continue_sign_in_process");
   };
 
-
+  // ㅇㅇㅇ
 
 
   return (
@@ -76,7 +76,7 @@ export default function Login({
           className="rounded-md px-4 py-2 bg-inherit border mb-6"
           type="password"
           name="password"
-          placeholder="••••"
+          placeholder="••••••"
           required
         />
         <SubmitButton
@@ -93,9 +93,9 @@ export default function Login({
         >
           Sign Up
         </SubmitButton>
-        {/* <Link href={"/signup"}>[Test] Go Sign Up</Link> */}
+        <Link href={"/signup"}>[Test] Go Sign Up</Link>
         <hr />
-        <p>비밀번호 글자수 제한없음</p>
+        <p>비밀번호 6자리 이상</p>
         <p>이메일 인증 후 로그인가능</p>
         {searchParams?.message && (
           <p className="mt-4 p-4 bg-foreground/10 text-foreground text-center">
