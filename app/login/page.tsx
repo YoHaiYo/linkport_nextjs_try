@@ -22,7 +22,7 @@ export default function Login({
     });
 
     if (error) {
-      return redirect("/login?message=Could not authenticate user");
+      return redirect("/login?message=Could_not_authenticate_user");
     }
 
     return redirect("/dashboard");
@@ -46,10 +46,11 @@ export default function Login({
     });
 
     if (error) {
-      return redirect("/login?message=Could not authenticate user");
+      console.log("error : ", error)
+      return redirect("/login?message=Could_not_authenticate_user");
     }
     // alert("check your email and verify authentication code")
-    return redirect("/login?message=Check email to continue sign in process");
+    return redirect("/login?message=Check_email_to_continue_sign_in_process");
   };
 
 
@@ -75,7 +76,7 @@ export default function Login({
           className="rounded-md px-4 py-2 bg-inherit border mb-6"
           type="password"
           name="password"
-          placeholder="••••••••"
+          placeholder="••••"
           required
         />
         <SubmitButton
@@ -92,7 +93,7 @@ export default function Login({
         >
           Sign Up
         </SubmitButton>
-        <Link href={"/signup"}>Sign Up Test</Link>
+        {/* <Link href={"/signup"}>[Test] Go Sign Up</Link> */}
         <hr />
         <p>비밀번호 글자수 제한없음</p>
         <p>이메일 인증 후 로그인가능</p>
