@@ -52,6 +52,9 @@ export default function Login({
     return redirect("/login?message=Check email to continue sign in process");
   };
 
+
+
+
   return (
     <div className="flex-1 flex flex-col w-full px-8 sm:max-w-md justify-center gap-2">
 
@@ -89,6 +92,7 @@ export default function Login({
         >
           Sign Up
         </SubmitButton>
+        <Link href={"/signup"}>Sign Up Test</Link>
         <hr />
         <p>비밀번호 글자수 제한없음</p>
         <p>이메일 인증 후 로그인가능</p>
@@ -98,6 +102,8 @@ export default function Login({
           </p>
         )}
       </form>
+
+
     </div>
   );
 }
