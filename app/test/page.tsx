@@ -8,7 +8,7 @@ export default function Test() {
       <section className="py-8">
         <div className="container px-4 mx-auto">
           <div className="flex flex-wrap -m-4">
-            <div className="w-full md:w-1/2 lg:w-1/4 p-4">
+            <div className="w-full md:w-1/2 lg:w-1/4xxx p-4">
               <div className="p-6 bg-white rounded">
                 <div className="flex items-center mb-6">
                   <span className="flex-shrink-0 inline-flex justify-center items-center mr-3 w-10 h-10 rounded-full bg-purple-500">
@@ -17,7 +17,7 @@ export default function Test() {
               </svg> */}
                   </span>
                   <div>
-                    <p className="text-xs font-bold">Example project name here dolor sit</p>
+                    <p className="text-xs font-bold">Example project name here dolor sit1</p>
                   </div>
                 </div>
                 <div>
@@ -62,7 +62,7 @@ export default function Test() {
                 </div>
               </div>
             </div>
-            <div className="w-full md:w-1/2 lg:w-1/4 p-4">
+            <div className="w-full md:w-1/2 lg:w-1/4xxx p-4">
               <div className="p-6 bg-white rounded">
                 <div className="flex items-center mb-6">
                   <span className="flex-shrink-0 inline-flex justify-center items-center mr-3 w-10 h-10 rounded-full bg-orange-500">
