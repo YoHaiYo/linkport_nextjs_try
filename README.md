@@ -1,4 +1,5 @@
 ### 메모
+- DB테이블은 'linkport' 사용중 (24.06.04)
 - @ 는 app폴더 밖 경로를 의미함
 - 클라이언트사이드 랜더링시 다음 이용 : import { createClient } from '@/utils/supabase/client'
 - 서버사이드 랜더링시 다음 이용 : import { createClient } from '@/utils/supabase/server'
