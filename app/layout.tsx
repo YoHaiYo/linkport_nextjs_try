@@ -1,5 +1,6 @@
 import { GeistSans } from "geist/font/sans";
-import "./globals.css";
+import "./globals_tailwind.css";
+// import "./globals_bootstrap.css";
 import HomeButton from "@/components/HomeButton";
 import Link from "next/link";
 import AuthButton from "@/components/AuthButton";
@@ -12,8 +13,8 @@ const defaultUrl = process.env.VERCEL_URL
 
 export const metadata = {
   metadataBase: new URL(defaultUrl),
-  title: "Next.js and Supabase Starter Kit",
-  description: "The fastest way to build apps with Next.js and Supabase",
+  title: "LinkPort",
+  description: "LinkPort description",
 };
 
 export default function RootLayout({

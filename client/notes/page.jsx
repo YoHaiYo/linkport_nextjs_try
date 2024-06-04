@@ -83,6 +83,44 @@ export default function Notes({ userid, useremail }) {
     }
   };
 
+  // Edit 누르기전
+  const EditBeforeNote = ({ idx, note, setUpdateNoteId, setNewTitle, handleDelete }) => {
+    return (
+      <>
+        <div className='flex-column'>
+          <div>{note.title}</div>
+          <div>{note.url}</div>
+          <div>{note.desc}</div>
+        </div>
+        <div className='absolute bottom-100 right-0'>
+          <button className='edit px-2 mx-1' onClick={() => {
+            setUpdateNoteId(note.id);
+            setNewTitle(note.title);
+          }}>Edit</button>
+          <button className='delete px-2 mx-1' onClick={() => handleDelete(note.id)}>Delete</button>
+        </div>
+      </>
+    );
+  };
+  // Edit 누른후
+  const EditAfterNote = ({ idx, note, newTitle, setNewTitle, handleUpdate, handleDelete }) => {
+    return (
+      <>
+        <input
+          className='border'
+          style={{ width: 200 }}
+          type="text"
+          value={newTitle}
+          onChange={(e) => setNewTitle(e.target.value)}
+          placeholder={note.title}
+        />
+        <button className='update' onClick={() => handleUpdate(note.id)}>Update</button>
+        <button className='delete px-2 mx-1' onClick={() => handleDelete(note.id)}>Delete</button>
+      </>
+    );
+  };
+
+
   return (
     <div id='note'>
       {/* <h1 className='font-bold' style={{ color: "blue" }}>useremail : {useremail}</h1> */}
@@ -97,42 +135,33 @@ export default function Notes({ userid, useremail }) {
         />
         <button className='write px-2' onClick={handleAdd}>Add</button>
       </div>
+      {/* 카드 부분 */}
       {notes.map((note, idx) => (
-        <div key={note.id} className='flex justify-between border-b'>
-          {updateNoteId === note.id ? (
-            <>
-              {/* Edit 누른 후 */}
-              <div className='flex'>
-                <p>{idx + 1})</p>
-                <input
-                  className='border'
-                  style={{ width: 200 }}
-                  type="text"
-                  value={newTitle}
-                  onChange={(e) => setNewTitle(e.target.value)}
-                  placeholder={note.title}
+        <>
+          <p>{idx + 1})</p>
+          <article key={note.id} className='relative mb-2'>
+            <div className='flex justify-between border p-2'>
+              {updateNoteId === note.id ? (
+                <EditAfterNote
+                  idx={idx}
+                  note={note}
+                  newTitle={newTitle}
+                  setNewTitle={setNewTitle}
+                  handleUpdate={handleUpdate}
+                  handleDelete={handleDelete}
                 />
-                <button className='update' onClick={() => handleUpdate(note.id)}>Update</button>
-                <button className='delete px-2 mx-1' onClick={() => handleDelete(note.id)}>Delete</button>
-              </div>
-            </>
-          ) : (
-            <>
-              {/* Edit 누르기 전 */}
-              <div className='flex'>
-                <p>{idx + 1})</p>
-                <div style={{ width: 200 }}>{note.title}</div>
-                <div className='flex'>
-                  <button className='edit px-2 mx-1' onClick={() => {
-                    setUpdateNoteId(note.id);
-                    setNewTitle(note.title);
-                  }}>Edit</button>
-                  <button className='delete px-2 mx-1' onClick={() => handleDelete(note.id)}>Delete</button>
-                </div>
-              </div>
-            </>
-          )}
-        </div>
+              ) : (
+                <EditBeforeNote
+                  idx={idx}
+                  note={note}
+                  setUpdateNoteId={setUpdateNoteId}
+                  setNewTitle={setNewTitle}
+                  handleDelete={handleDelete}
+                />
+              )}
+            </div>
+          </article>
+        </>
       ))}
     </div>
   );
