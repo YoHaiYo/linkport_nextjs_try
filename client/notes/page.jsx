@@ -12,7 +12,11 @@ export default function Notes({ userid, useremail }) {
   const [notes, setNotes] = useState([]);
   const [updateNoteId, setUpdateNoteId] = useState(null);
   const [newTitle, setNewTitle] = useState("");
+  const [newUrl, setNewUrl] = useState("");
+  const [newDesc, setNewDesc] = useState("");
   const [addTitle, setAddTitle] = useState("");
+  const [addUrl, setAddUrl] = useState("");
+  const [addDesc, setAddDesc] = useState("");
 
   // Fetch notes on component mount
   useEffect(() => {
@@ -32,11 +36,11 @@ export default function Notes({ userid, useremail }) {
     fetchNotes();
   }, [userid]);  // Depend on userid to refetch when it changes
 
-  // Update note title
+  // Update note title, url, and desc
   const handleUpdate = async (id) => {
     const { error } = await supabase
       .from(tablename)
-      .update({ title: newTitle })
+      .update({ title: newTitle, url: newUrl, desc: newDesc })
       .eq("id", id)
       .eq("userid", userid);  // Ensure only the user's note is updated
 
@@ -45,11 +49,13 @@ export default function Notes({ userid, useremail }) {
     } else {
       setNotes((prevNotes) =>
         prevNotes.map((note) =>
-          note.id === id ? { ...note, title: newTitle } : note
+          note.id === id ? { ...note, title: newTitle, url: newUrl, desc: newDesc } : note
         )
       );
       setUpdateNoteId(null);
       setNewTitle("");
+      setNewUrl("");
+      setNewDesc("");
     }
   };
 
@@ -72,7 +78,7 @@ export default function Notes({ userid, useremail }) {
   const handleAdd = async () => {
     const { data, error } = await supabase
       .from(tablename)
-      .insert([{ title: addTitle, userid, useremail }])  // Add userid to the new note
+      .insert([{ title: addTitle, url: addUrl, desc: addDesc, userid, useremail }])  // Add userid to the new note
       .select();
 
     if (error) {
@@ -80,11 +86,13 @@ export default function Notes({ userid, useremail }) {
     } else {
       setNotes((prevNotes) => [...prevNotes, ...data]);
       setAddTitle("");
+      setAddUrl("");
+      setAddDesc("");
     }
   };
 
   // Edit 누르기전
-  const EditBeforeNote = ({ idx, note, setUpdateNoteId, setNewTitle, handleDelete }) => {
+  const EditBeforeNote = ({ idx, note, setUpdateNoteId, setNewTitle, setNewUrl, setNewDesc, handleDelete }) => {
     return (
       <>
         <div className='flex-column'>
@@ -96,14 +104,17 @@ export default function Notes({ userid, useremail }) {
           <button className='edit px-2 mx-1' onClick={() => {
             setUpdateNoteId(note.id);
             setNewTitle(note.title);
+            setNewUrl(note.url);
+            setNewDesc(note.desc);
           }}>Edit</button>
           <button className='delete px-2 mx-1' onClick={() => handleDelete(note.id)}>Delete</button>
         </div>
       </>
     );
   };
+
   // Edit 누른후
-  const EditAfterNote = ({ idx, note, newTitle, setNewTitle, handleUpdate, handleDelete }) => {
+  const EditAfterNote = ({ idx, note, newTitle, setNewTitle, newUrl, setNewUrl, newDesc, setNewDesc, handleUpdate, handleDelete }) => {
     return (
       <>
         <input
@@ -112,7 +123,23 @@ export default function Notes({ userid, useremail }) {
           type="text"
           value={newTitle}
           onChange={(e) => setNewTitle(e.target.value)}
-          placeholder={note.title}
+          placeholder="Title"
+        />
+        <input
+          className='border'
+          style={{ width: 200 }}
+          type="text"
+          value={newUrl}
+          onChange={(e) => setNewUrl(e.target.value)}
+          placeholder="URL"
+        />
+        <input
+          className='border'
+          style={{ width: 200 }}
+          type="text"
+          value={newDesc}
+          onChange={(e) => setNewDesc(e.target.value)}
+          placeholder="Description"
         />
         <button className='update' onClick={() => handleUpdate(note.id)}>Update</button>
         <button className='delete px-2 mx-1' onClick={() => handleDelete(note.id)}>Delete</button>
@@ -120,10 +147,8 @@ export default function Notes({ userid, useremail }) {
     );
   };
 
-
   return (
     <div id='note'>
-      {/* <h1 className='font-bold' style={{ color: "blue" }}>useremail : {useremail}</h1> */}
       <h1 className='font-bold mb-2'>My Notes</h1>
       <div className='flex mb-5'>
         <input
@@ -131,7 +156,21 @@ export default function Notes({ userid, useremail }) {
           type="text"
           value={addTitle}
           onChange={(e) => setAddTitle(e.target.value)}
-          placeholder="Add a new note"
+          placeholder="Title"
+        />
+        <input
+          className='border'
+          type="text"
+          value={addUrl}
+          onChange={(e) => setAddUrl(e.target.value)}
+          placeholder="URL"
+        />
+        <input
+          className='border'
+          type="text"
+          value={addDesc}
+          onChange={(e) => setAddDesc(e.target.value)}
+          placeholder="Description"
         />
         <button className='write px-2' onClick={handleAdd}>Add</button>
       </div>
@@ -147,6 +186,10 @@ export default function Notes({ userid, useremail }) {
                   note={note}
                   newTitle={newTitle}
                   setNewTitle={setNewTitle}
+                  newUrl={newUrl}
+                  setNewUrl={setNewUrl}
+                  newDesc={newDesc}
+                  setNewDesc={setNewDesc}
                   handleUpdate={handleUpdate}
                   handleDelete={handleDelete}
                 />
@@ -156,6 +199,8 @@ export default function Notes({ userid, useremail }) {
                   note={note}
                   setUpdateNoteId={setUpdateNoteId}
                   setNewTitle={setNewTitle}
+                  setNewUrl={setNewUrl}
+                  setNewDesc={setNewDesc}
                   handleDelete={handleDelete}
                 />
               )}
