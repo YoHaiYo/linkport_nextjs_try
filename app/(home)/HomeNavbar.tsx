@@ -1,5 +1,3 @@
-// "use client"
-
 import AuthButton from "@/components/AuthButton";
 import HomeButton from "@/components/HomeButton";
 import { ExampleComponent2 } from "@/components/templet/ExampleComponent2";
@@ -9,7 +7,6 @@ import { colors } from "@/utils/theme/colors";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Link from "next/link";
-import { useState } from "react";
 // import { useState } from "react";
 
 const canInitSupabaseClient = () => {
