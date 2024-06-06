@@ -74,9 +74,9 @@ export const HomeNavbar = () => {
           </div>
           <div className="hidden xl:block xl:w-1/3">
             <div className="flex items-center justify-end">
-              {isSupabaseConnected && <AuthButton />}
+              {/* {isSupabaseConnected && <AuthButton />} */}
               {/* isSupabaseConnected가 안들어와서 배포판에서 로그인안나옴. 임시해결용 */}
-              {/* <AuthButton /> */}
+              <AuthButton />
             </div>
           </div>
         </div>
