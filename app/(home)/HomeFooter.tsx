@@ -161,30 +161,30 @@ export const HomeFooter = () => {
             </form>
           </div>
           {/* Copyright information */}
-          <div className="mb-6">
-            <div className="flex flex-wrap justify-center">
-              <b className="mr-1">Deploy</b>
-              <a href="https://linkport-nextjs-try.vercel.app/" target="_blank">
-                https://linkport-nextjs-try.vercel.app/
-              </a>
-            </div>
-
-            <div className="flex flex-wrap justify-center">
-              <b className="mr-1">github</b>
-              <a
-                href="https://github.com/YoHaiYo/linkport_nextjs_try"
-                target="_blank"
-              >
-                https://github.com/YoHaiYo/linkport_nextjs_try
-              </a>
-            </div>
-
-            <div className="flex flex-wrap justify-center">
-              <b className="mr-1">Vercel</b>
-              <a href="https://vercel.com/" target="_blank">
-                https://vercel.com/
-              </a>
-            </div>
+          <div className="mb-6 flex justify-center">
+            <ul className="text-left">
+              <li>
+                <b className="mr-1">Deploy</b>
+                <a href="https://linkport-nextjs-try.vercel.app/" target="_blank">
+                  https://linkport-nextjs-try.vercel.app/
+                </a>
+              </li>
+              <li>
+                <b className="mr-1">github</b>
+                <a
+                  href="https://github.com/YoHaiYo/linkport_nextjs_try"
+                  target="_blank"
+                >
+                  https://github.com/YoHaiYo/linkport_nextjs_try
+                </a>
+              </li>
+              <li>
+                <b className="mr-1">Vercel</b>
+                <a href="https://vercel.com/" target="_blank">
+                  https://vercel.com/
+                </a>
+              </li>
+            </ul>
           </div>
         </div>
         {/* Copyright section */}

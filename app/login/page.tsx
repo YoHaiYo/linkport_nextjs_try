@@ -93,9 +93,6 @@ export default function Login({
               >
                 Sign Up
               </SubmitButton>
-              <Link className="bg-red-500" href={"/signup"}>
-                (테스트 중)Go Sign Up
-              </Link>
               <hr />
               <p>※ 비밀번호 6자리 이상</p>
               <p>※ 이메일 인증 후 로그인가능</p>

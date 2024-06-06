@@ -55,7 +55,7 @@ export default async function AuthButton() {
         Login
       </Link>
       <Link
-        href="/login"
+        href="/signup"
         className="inline-block py-2 px-4 text-sm leading-5 text-violet-50 bg-violet-500 hover:bg-violet-600 font-medium focus:ring-2 focus:ring-violet-500 focus:ring-opacity-50 rounded-md"
       >
         Sign Up
