@@ -1,100 +1,8 @@
-// "use client"
-
-import AuthButton from "@/components/AuthButton";
-import HomeButton from "@/components/HomeButton";
-import { createClient } from "@/utils/supabase/server";
-
-import { colors } from "@/utils/supabase/theme/colors";
-import { faBars } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import Link from "next/link";
-// import { useState } from "react";
-
-const canInitSupabaseClient = () => {
-  // This function is just for the interactive tutorial.
-  // Feel free to remove it once you have Supabase connected.
-  try {
-    createClient();
-    return true;
-  } catch (e) {
-    return false;
-  }
-};
-
-const isSupabaseConnected = canInitSupabaseClient();
-
-console.log("isSupabaseConnected : ", isSupabaseConnected)
-
-export const HomeNavbar = () => {
-  // const [menuVisible, setMenuVisible] = useState(false);
+export const MobileNavMenu = () => {
 
   return (
-    <section className="bg-white">
-      <nav className="flex justify-between p-6 px-4">
-        <div className="flex justify-between items-center w-full">
-          <div className="xl:w-1/3">
-            {/* home 버튼 */}
-            <Link className="block max-w-max" href="/">
-              <img className="h-8" src="/svg/flex-ui-violet-light.svg" alt="" />
-            </Link>
-            {/* <a className="block max-w-max" href="/">
-              <img className="h-8" src="/svg/flex-ui-violet-light.svg" alt="" />
-            </a> */}
-          </div>
-          <div className="hidden xl:block xl:w-1/3">
-            <ul className="flex justify-center">
-              <li className="mr-12">
-                <a
-                  className="text-coolGray-500 hover:text-coolGray-900 font-medium"
-                  href="#"
-                >
-                  Product
-                </a>
-              </li>
-              <li className="mr-12">
-                <a
-                  className="text-coolGray-500 hover:text-coolGray-900 font-medium"
-                  href="#"
-                >
-                  Features
-                </a>
-              </li>
-              <li className="mr-12">
-                <a
-                  className="text-coolGray-500 hover:text-coolGray-900 font-medium"
-                  href="#"
-                >
-                  Resources
-                </a>
-              </li>
-              <li>
-                <a
-                  className="text-coolGray-500 hover:text-coolGray-900 font-medium"
-                  href="#"
-                >
-                  Pricing
-                </a>
-              </li>
-            </ul>
-          </div>
-          <div className="hidden xl:block xl:w-1/3">
-            <div className="flex items-center justify-end">
-              {/* {isSupabaseConnected && <AuthButton />} */}
-              {/* isSupabaseConnected가 안들어와서 배포판에서 로그인안나옴. 임시해결용 */}
-              <AuthButton />
-            </div>
-          </div>
-        </div>
-        <button
-          className="navbar-burger self-center xl:hidden"
-        // onClick={() => { setMenuVisible(!menuVisible) }}
-        >
-          <FontAwesomeIcon icon={faBars} color={colors.primary} width={35} />
-        </button>
-      </nav>
-
-      {/* 모바일 네비바 인것으로 생각됨. */}
-      {<div className="navbar-menu hidden fixed top-0 left-0 z-50 w-full h-full bg-coolGray-900 bg-opacity-50">
+    <>
+      <div className="navbar-menu hidden fixed top-0 left-0 z-50 w-full h-full bg-coolGray-900 bg-opacity-50">
         <div className="fixed top-0 left-0 bottom-0 w-full w-4/6 max-w-xs bg-white">
           <nav className="relative p-6 h-full overflow-y-auto">
             <div className="flex flex-col justify-between h-full">
@@ -174,7 +82,7 @@ export const HomeNavbar = () => {
             </svg>
           </a>
         </div>
-      </div>}
-    </section>
-  );
-};
+      </div>
+    </>
+  )
+}

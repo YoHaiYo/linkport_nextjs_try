@@ -58,7 +58,8 @@ NEXT_PUBLIC_SUPABASE_ANON_KEY=
 - 로그인 해야만 dashboard 페이지 나오게 구현. server 사이드로 위의 로그인성공시 활성코드 쓰고 import로 보드 페이지 불러오면됨..!
 - /notes 페이지는 url로 들어가면 안되니까 (notes)로 폴더명변경.
 
-### 다음 작업예정
+### 발생한 이슈
+- HomeNavBar에서 로그인 메뉴는 SSR인데 햄버거버튼은 CSR로 해야됨. 어떻게 분리할지고민 or 전역상태관리로 해결할 수 있을지 고민하기(Redux)
 
 - 배포 버전에서 네비바에 로그인 버튼 안뜨는 문제 (SSR 문제일듯함)
 -> isSupabaseConnected가 안들어와서 배포판에서 로그인안나옴. 임시해결용으로 isSupabaseConnected없어도 나오게 설정함. (HomeNavbar.tsx)
@@ -66,14 +67,14 @@ NEXT_PUBLIC_SUPABASE_ANON_KEY=
 - 회원가입 이메일 인증 후에 protect페이지로 이동하는 이슈 해결하기 
 -> /app/auth/callback 에서 redirect 수정하였음. 해결됬는지는 확인필요!
 
+### 해결한 이슈
+- 로그인하는 유저별로 다르게 dashboard 보여줄려면 DB table 어떻게 짤지 고민하기 -> userid 일치여부로 구현함!
+
+### 다음 작업예정
 - 코드구조 뜯어보고 깔끔하게 정리해서 보일러플레이트로 만들기
 - url 저장 형태로 UI, DB 구축하기
 - google, github로 로그인
 - 편집용이 아닌 배포용 dashboard 구현문제
-
-### 해결한 문제
-
-- 로그인하는 유저별로 다르게 dashboard 보여줄려면 DB table 어떻게 짤지 고민하기 -> userid 일치여부로 구현함!
 
 ### 테스트용 배포주소
 
