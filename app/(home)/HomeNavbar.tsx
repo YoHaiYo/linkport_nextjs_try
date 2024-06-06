@@ -74,22 +74,9 @@ export const HomeNavbar = () => {
           </div>
           <div className="hidden xl:block xl:w-1/3">
             <div className="flex items-center justify-end">
-              {/* <a
-                className="inline-block py-2 px-4 mr-2 leading-5 text-coolGray-500 hover:text-coolGray-900 bg-transparent font-medium rounded-md"
-                href="#"
-              >
-                Log In
-              </a>
-              <a
-                className="inline-block py-2 px-4 text-sm leading-5 text-violet-50 bg-violet-500 hover:bg-violet-600 font-medium focus:ring-2 focus:ring-violet-500 focus:ring-opacity-50 rounded-md"
-                href="#"
-              >
-                Sign Up
-              </a> */}
               {isSupabaseConnected && <AuthButton />}
-
-              {/* test용 */}
-              <AuthButton />
+              {/* isSupabaseConnected가 안들어와서 배포판에서 로그인안나옴. 임시해결용 */}
+              {/* <AuthButton /> */}
             </div>
           </div>
         </div>
