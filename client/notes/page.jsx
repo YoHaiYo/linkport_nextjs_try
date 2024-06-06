@@ -1,10 +1,9 @@
 "use client"
-
 import { createClient } from '@/utils/supabase/client'; // @는 app폴더 밖을 의미
 import { useState, useEffect } from 'react';
 import './style/style.css';
 
-const tablename = "notes" // 여기서 supabase 테이블명 일괄조절하기
+const tablename = "notes"; // 여기서 supabase 테이블명 일괄조절하기
 
 const supabase = createClient();
 
@@ -92,7 +91,7 @@ export default function Notes({ userid, useremail }) {
   };
 
   // Edit 누르기전
-  const EditBeforeNote = ({ idx, note, setUpdateNoteId, setNewTitle, setNewUrl, setNewDesc, handleDelete }) => {
+  const EditBeforeNote = ({ note, setUpdateNoteId, setNewTitle, setNewUrl, setNewDesc, handleDelete }) => {
     return (
       <>
         <div className='flex-column'>
@@ -114,7 +113,7 @@ export default function Notes({ userid, useremail }) {
   };
 
   // Edit 누른후
-  const EditAfterNote = ({ idx, note, newTitle, setNewTitle, newUrl, setNewUrl, newDesc, setNewDesc, handleUpdate, handleDelete }) => {
+  const EditAfterNote = ({ note, newTitle, setNewTitle, newUrl, setNewUrl, newDesc, setNewDesc, handleUpdate, handleDelete }) => {
     return (
       <>
         <input
@@ -176,13 +175,12 @@ export default function Notes({ userid, useremail }) {
       </div>
       {/* 카드 부분 */}
       {notes.map((note, idx) => (
-        <>
+        <div key={note.id}>
           <p>{idx + 1})</p>
-          <article key={note.id} className='relative mb-2'>
+          <article className='relative mb-2'>
             <div className='flex justify-between border p-2'>
               {updateNoteId === note.id ? (
                 <EditAfterNote
-                  idx={idx}
                   note={note}
                   newTitle={newTitle}
                   setNewTitle={setNewTitle}
@@ -195,7 +193,6 @@ export default function Notes({ userid, useremail }) {
                 />
               ) : (
                 <EditBeforeNote
-                  idx={idx}
                   note={note}
                   setUpdateNoteId={setUpdateNoteId}
                   setNewTitle={setNewTitle}
@@ -206,7 +203,7 @@ export default function Notes({ userid, useremail }) {
               )}
             </div>
           </article>
-        </>
+        </div>
       ))}
     </div>
   );

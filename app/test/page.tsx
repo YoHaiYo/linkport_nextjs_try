@@ -5,857 +5,858 @@
 export default function Test() {
   return (
     <>
-      <section className="bg-blueGray-50">
-        <div className="container mx-auto overflow-hidden">
-          <div className="flex items-center justify-between px-4 py-5 bg-blueGray-50">
-            <div className="w-auto">
-              <div className="flex flex-wrap items-center">
-                <div className="w-auto mr-14">
-                  <a href="#">
-                    <img src="flaro-assets/logos/flaro-logo-black.svg" alt="" />
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div className="w-auto">
-              <div className="flex flex-wrap items-center">
-                <div className="w-auto hidden lg:block">
-                  <ul className="flex items-center mr-16">
-                    <li className="mr-9 font-medium hover:text-gray-700">
-                      <a href="#">Features</a>
-                    </li>
-                    <li className="mr-9 font-medium hover:text-gray-700">
-                      <a href="#">Solutions</a>
-                    </li>
-                    <li className="mr-9 font-medium hover:text-gray-700">
-                      <a href="#">Resources</a>
-                    </li>
-                    <li className="font-medium hover:text-gray-700">
-                      <a href="#">Pricing</a>
-                    </li>
-                  </ul>
-                </div>
-                <div className="w-auto hidden lg:block">
-                  <div className="inline-block">
-                    <button
-                      className="py-3 px-5 w-full text-white font-semibold border border-indigo-700 rounded-xl focus:ring focus:ring-indigo-300 bg-indigo-600 hover:bg-indigo-700 transition ease-in-out duration-200"
-                      type="button"
-                    >
-                      Try 14 Days Free Trial
-                    </button>
-                  </div>
-                </div>
-                <div className="w-auto lg:hidden">
-                  <a href="#">
-                    <svg
-                      className="navbar-burger text-indigo-600"
-                      width={51}
-                      height={51}
-                      viewBox="0 0 56 56"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <rect width={56} height={56} rx={28} fill="currentColor" />
-                      <path
-                        d="M37 32H19M37 24H19"
-                        stroke="white"
-                        strokeWidth="1.5"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      />
-                    </svg>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="hidden navbar-menu fixed top-0 left-0 bottom-0 w-4/6 sm:max-w-xs z-50">
-            <div className="navbar-backdrop fixed inset-0 bg-gray-800 opacity-80" />
-            <nav className="relative z-10 px-9 pt-8 bg-white h-full overflow-y-auto">
-              <div className="flex flex-wrap justify-between h-full">
-                <div className="w-full">
-                  <div className="flex items-center justify-between -m-2">
-                    <div className="w-auto p-2">
-                      <a className="inline-block" href="#">
-                        <img src="flaro-assets/logos/flaro-logo-black.svg" alt="" />
-                      </a>
-                    </div>
-                    <div className="w-auto p-2">
-                      <a className="navbar-burger" href="#">
-                        <svg
-                          width={24}
-                          height={24}
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M6 18L18 6M6 6L18 18"
-                            stroke="#111827"
-                            strokeWidth={2}
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                          />
-                        </svg>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-                <div className="flex flex-col justify-center py-16 w-full">
-                  <ul>
-                    <li className="mb-12">
-                      <a className="font-medium hover:text-gray-700" href="#">
-                        Features
-                      </a>
-                    </li>
-                    <li className="mb-12">
-                      <a className="font-medium hover:text-gray-700" href="#">
-                        Solutions
-                      </a>
-                    </li>
-                    <li className="mb-12">
-                      <a className="font-medium hover:text-gray-700" href="#">
-                        Resources
-                      </a>
-                    </li>
-                    <li>
-                      <a className="font-medium hover:text-gray-700" href="#">
-                        Pricing
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-                <div className="flex flex-col justify-end w-full pb-8">
-                  <div className="flex flex-wrap">
-                    <div className="w-full">
-                      <div className="block">
-                        <button
-                          className="py-3 px-5 w-full text-white font-semibold border border-indigo-700 rounded-xl focus:ring focus:ring-indigo-300 bg-indigo-600 hover:bg-indigo-700 transition ease-in-out duration-200"
-                          type="button"
-                        >
-                          Try 14 Days Free Trial
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </nav>
-          </div>
+      <section className="bg-white">
+  <nav className="flex justify-between p-6 px-4">
+    <div className="flex justify-between items-center w-full">
+      <div className="xl:w-1/3">
+        <a className="block max-w-max" href="#">
+          <img
+            className="h-8"
+            src="flex-ui-assets/logos/flex-ui-violet-light.svg"
+            alt=""
+          />
+        </a>
+      </div>
+      <div className="hidden xl:block xl:w-1/3">
+        <ul className="flex justify-center">
+          <li className="mr-12">
+            <a
+              className="text-coolGray-500 hover:text-coolGray-900 font-medium"
+              href="#"
+            >
+              Product
+            </a>
+          </li>
+          <li className="mr-12">
+            <a
+              className="text-coolGray-500 hover:text-coolGray-900 font-medium"
+              href="#"
+            >
+              Features
+            </a>
+          </li>
+          <li className="mr-12">
+            <a
+              className="text-coolGray-500 hover:text-coolGray-900 font-medium"
+              href="#"
+            >
+              Resources
+            </a>
+          </li>
+          <li>
+            <a
+              className="text-coolGray-500 hover:text-coolGray-900 font-medium"
+              href="#"
+            >
+              Pricing
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div className="hidden xl:block xl:w-1/3">
+        <div className="flex items-center justify-end">
+          <a
+            className="inline-block py-2 px-4 mr-2 leading-5 text-coolGray-500 hover:text-coolGray-900 bg-transparent font-medium rounded-md"
+            href="#"
+          >
+            Log In
+          </a>
+          <a
+            className="inline-block py-2 px-4 text-sm leading-5 text-violet-50 bg-violet-500 hover:bg-violet-600 font-medium focus:ring-2 focus:ring-violet-500 focus:ring-opacity-50 rounded-md"
+            href="#"
+          >
+            Sign Up
+          </a>
         </div>
-        <div className="overflow-hidden pt-16">
-          <div className="container px-4 mx-auto">
-            <div className="flex flex-wrap -m-8">
-              <div className="w-full md:w-1/2 p-8">
-                <div className="inline-block mb-6 px-2 py-1 font-semibold bg-green-100 rounded-full">
-                  <div className="flex flex-wrap items-center -m-1">
-                    <div className="w-auto p-1">
-                      <a className="text-sm" href="">
-                        👋 We are hiring! View open roles
-                      </a>
-                    </div>
-                    <div className="w-auto p-1">
-                      <svg
-                        width={15}
-                        height={15}
-                        viewBox="0 0 15 15"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M8.66667 3.41675L12.75 7.50008M12.75 7.50008L8.66667 11.5834M12.75 7.50008L2.25 7.50008"
-                          stroke="black"
-                          strokeWidth="1.5"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                        />
-                      </svg>
-                    </div>
-                  </div>
-                </div>
-                <h1 className="mb-6 text-6xl md:text-8xl lg:text-10xl font-bold font-heading md:max-w-xl leading-none">
-                  Discover mentors that helps you grow
-                </h1>
-                <p className="mb-11 text-lg text-gray-900 font-medium md:max-w-md">
-                  Get the best-in-class group mentoring plans and professional
-                  benefits for your team
-                </p>
-                <div className="flex flex-wrap -m-2.5 mb-20">
-                  <div className="w-full md:w-auto p-2.5">
-                    <div className="block">
-                      <button
-                        className="py-4 px-6 w-full text-white font-semibold border border-indigo-700 rounded-xl focus:ring focus:ring-indigo-300 bg-indigo-600 hover:bg-indigo-700 transition ease-in-out duration-200"
-                        type="button"
-                      >
-                        Join Free for 30 Days
-                      </button>
-                    </div>
-                  </div>
-                  <div className="w-full md:w-auto p-2.5">
-                    <div className="block">
-                      <button
-                        className="py-4 px-9 w-full font-semibold border border-gray-300 hover:border-gray-400 rounded-xl focus:ring focus:ring-gray-50 bg-transparent hover:bg-gray-100 transition ease-in-out duration-200"
-                        type="button"
-                      >
-                        <div className="flex flex-wrap justify-center items-center -m-1">
-                          <div className="w-auto p-1">
-                            <svg
-                              width={19}
-                              height={18}
-                              viewBox="0 0 19 18"
-                              fill="none"
-                              xmlns="http://www.w3.org/2000/svg"
-                            >
-                              <path
-                                d="M2.75 3.75C2.75 2.92157 3.42157 2.25 4.25 2.25H6.70943C7.03225 2.25 7.31886 2.45657 7.42094 2.76283L8.5443 6.13291C8.66233 6.48699 8.50203 6.87398 8.1682 7.0409L6.47525 7.88737C7.30194 9.72091 8.77909 11.1981 10.6126 12.0247L11.4591 10.3318C11.626 9.99796 12.013 9.83767 12.3671 9.9557L15.7372 11.0791C16.0434 11.1811 16.25 11.4677 16.25 11.7906V14.25C16.25 15.0784 15.5784 15.75 14.75 15.75H14C7.7868 15.75 2.75 10.7132 2.75 4.5V3.75Z"
-                                stroke="black"
-                                strokeWidth="1.5"
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                              />
-                            </svg>
-                          </div>
-                          <div className="w-auto p-1">
-                            <span>Book a call</span>
-                          </div>
-                        </div>
-                      </button>
-                    </div>
-                  </div>
-                </div>
-                <p className="mb-6 text-sm text-gray-500 font-semibold uppercase">
-                  Trusted and loved by 100+ tech first teams
-                </p>
-                <div className="flex flex-wrap -m-3">
-                  <div className="w-auto p-3">
-                    <img src="flaro-assets/logos/brands/brand.png" alt="" />
-                  </div>
-                  <div className="w-auto p-3">
-                    <img src="flaro-assets/logos/brands/brand2.png" alt="" />
-                  </div>
-                  <div className="w-auto p-3">
-                    <img src="flaro-assets/logos/brands/brand3.png" alt="" />
-                  </div>
-                </div>
-              </div>
-              <div className="w-full md:w-1/2 p-8">
-                <img
-                  className="transform hover:-translate-y-16 transition ease-in-out duration-1000"
-                  src="flaro-assets/images/headers/header.png"
-                  alt=""
-                />
-              </div>
+      </div>
+    </div>
+    <button className="navbar-burger self-center xl:hidden">
+      <svg
+        width={35}
+        height={35}
+        viewBox="0 0 32 32"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <rect
+          className="text-coolGray-50"
+          width={32}
+          height={32}
+          rx={6}
+          fill="currentColor"
+        />
+        <path
+          className="text-coolGray-500"
+          d="M7 12H25C25.2652 12 25.5196 11.8946 25.7071 11.7071C25.8946 11.5196 26 11.2652 26 11C26 10.7348 25.8946 10.4804 25.7071 10.2929C25.5196 10.1054 25.2652 10 25 10H7C6.73478 10 6.48043 10.1054 6.29289 10.2929C6.10536 10.4804 6 10.7348 6 11C6 11.2652 6.10536 11.5196 6.29289 11.7071C6.48043 11.8946 6.73478 12 7 12ZM25 15H7C6.73478 15 6.48043 15.1054 6.29289 15.2929C6.10536 15.4804 6 15.7348 6 16C6 16.2652 6.10536 16.5196 6.29289 16.7071C6.48043 16.8946 6.73478 17 7 17H25C25.2652 17 25.5196 16.8946 25.7071 16.7071C25.8946 16.5196 26 16.2652 26 16C26 15.7348 25.8946 15.4804 25.7071 15.2929C25.5196 15.1054 25.2652 15 25 15ZM25 20H7C6.73478 20 6.48043 20.1054 6.29289 20.2929C6.10536 20.4804 6 20.7348 6 21C6 21.2652 6.10536 21.5196 6.29289 21.7071C6.48043 21.8946 6.73478 22 7 22H25C25.2652 22 25.5196 21.8946 25.7071 21.7071C25.8946 21.5196 26 21.2652 26 21C26 20.7348 25.8946 20.4804 25.7071 20.2929C25.5196 20.1054 25.2652 20 25 20Z"
+          fill="currentColor"
+        />
+      </svg>
+    </button>
+  </nav>
+  <div className="navbar-menu hidden fixed top-0 left-0 z-50 w-full h-full bg-coolGray-900 bg-opacity-50">
+    <div className="fixed top-0 left-0 bottom-0 w-full w-4/6 max-w-xs bg-white">
+      <nav className="relative p-6 h-full overflow-y-auto">
+        <div className="flex flex-col justify-between h-full">
+          <a className="inline-block" href="#">
+            <img
+              className="h-8"
+              src="flex-ui-assets/logos/flex-ui-violet-light.svg"
+              alt=""
+            />
+          </a>
+          <ul className="py-6">
+            <li>
+              <a
+                className="block py-3 px-4 text-coolGray-500 hover:text-coolGray-900 font-medium hover:bg-coolGray-50 rounded-md"
+                href="#"
+              >
+                Product
+              </a>
+            </li>
+            <li>
+              <a
+                className="block py-3 px-4 text-coolGray-500 hover:text-coolGray-900 font-medium hover:bg-coolGray-50 rounded-md"
+                href="#"
+              >
+                Features
+              </a>
+            </li>
+            <li>
+              <a
+                className="block py-3 px-4 text-coolGray-500 hover:text-coolGray-900 font-medium hover:bg-coolGray-50 rounded-md"
+                href="#"
+              >
+                Pricing
+              </a>
+            </li>
+            <li>
+              <a
+                className="block py-3 px-4 text-coolGray-500 hover:text-coolGray-900 font-medium hover:bg-coolGray-50 rounded-md"
+                href="#"
+              >
+                Resources
+              </a>
+            </li>
+          </ul>
+          <div className="flex flex-wrap">
+            <div className="w-full mb-2">
+              <a
+                className="inline-block py-2 px-4 w-full text-sm leading-5 text-coolGray-500 hover:text-coolGray-900 bg-transparent font-medium text-center rounded-md"
+                href="#"
+              >
+                Log In
+              </a>
+            </div>
+            <div className="w-full">
+              <a
+                className="inline-block py-2 px-4 w-full text-sm leading-5 text-white bg-violet-500 hover:bg-violet-600 font-medium text-center focus:ring-2 focus:ring-violet-500 focus:ring-opacity-50 rounded-md"
+                href="#"
+              >
+                Sign Up
+              </a>
             </div>
           </div>
         </div>
-      </section>
-
-      <section className="py-8">
-        <div className="container px-4 mx-auto">
-          <div className="flex flex-wrap -m-4">
-            <div className="w-full md:w-1/2 lg:w-1/4 p-4">
-              <div className="p-6 bg-white rounded">
-                <div className="flex items-center mb-6">
-                  <span className="flex-shrink-0 inline-flex justify-center items-center mr-3 w-10 h-10 rounded-full bg-purple-500">
-                    <svg
-                      width={18}
-                      height={16}
-                      viewBox="0 0 18 16"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M14.8335 2.58333H9.60014L9.33348 1.75C9.1606 1.26102 8.83993 0.837918 8.41589 0.539299C7.99185 0.24068 7.48544 0.0813322 6.96681 0.0833316H3.16681C2.50377 0.0833316 1.86788 0.346724 1.39904 0.815565C0.930201 1.28441 0.666809 1.92029 0.666809 2.58333V13.4167C0.666809 14.0797 0.930201 14.7156 1.39904 15.1844C1.86788 15.6533 2.50377 15.9167 3.16681 15.9167H14.8335C15.4965 15.9167 16.1324 15.6533 16.6012 15.1844C17.0701 14.7156 17.3335 14.0797 17.3335 13.4167V5.08333C17.3335 4.42029 17.0701 3.78441 16.6012 3.31557C16.1324 2.84672 15.4965 2.58333 14.8335 2.58333ZM15.6668 13.4167C15.6668 13.6377 15.579 13.8496 15.4227 14.0059C15.2665 14.1622 15.0545 14.25 14.8335 14.25H3.16681C2.9458 14.25 2.73383 14.1622 2.57755 14.0059C2.42127 13.8496 2.33348 13.6377 2.33348 13.4167V2.58333C2.33348 2.36232 2.42127 2.15036 2.57755 1.99408C2.73383 1.8378 2.9458 1.75 3.16681 1.75H6.96681C7.14151 1.74955 7.31194 1.80401 7.454 1.9057C7.59606 2.00739 7.70257 2.15115 7.75848 2.31667L8.20848 3.68333C8.26438 3.84885 8.37089 3.99261 8.51295 4.0943C8.65501 4.19598 8.82544 4.25045 9.00014 4.25H14.8335C15.0545 4.25 15.2665 4.3378 15.4227 4.49408C15.579 4.65036 15.6668 4.86232 15.6668 5.08333V13.4167Z"
-                        fill="#E6D4F8"
-                      />
-                    </svg>
-                  </span>
-                  <div>
-                    <p className="text-xs font-bold">
-                      Example project name here dolor sit
-                    </p>
-                  </div>
-                </div>
-                <div>
-                  <div className="flex items-center mb-3">
-                    <span className="mr-3">
-                      <svg
-                        width={14}
-                        height={18}
-                        viewBox="0 0 14 18"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M10.6415 9.65834C10.5397 9.61785 10.431 9.5978 10.3215 9.59934C10.212 9.60088 10.1038 9.62397 10.0032 9.66731C9.90261 9.71064 9.81153 9.77337 9.73518 9.8519C9.65882 9.93043 9.59868 10.0232 9.55819 10.125C9.5177 10.2268 9.49765 10.3355 9.49919 10.4451C9.50073 10.5546 9.52382 10.6627 9.56716 10.7633C9.61049 10.8639 9.67321 10.955 9.75175 11.0314C9.83028 11.1077 9.92308 11.1678 10.0249 11.2083C11.2415 11.6917 11.9999 12.4417 11.9999 13.1667C11.9999 14.35 9.94986 15.6667 6.99986 15.6667C4.04986 15.6667 1.99986 14.35 1.99986 13.1667C1.99986 12.4417 2.75819 11.6917 3.97486 11.2083C4.1804 11.1266 4.34504 10.9665 4.43256 10.7633C4.52007 10.5602 4.5233 10.3305 4.44152 10.125C4.35975 9.91946 4.19967 9.75482 3.99651 9.66731C3.79334 9.57979 3.56373 9.57656 3.35819 9.65834C1.46652 10.4083 0.333191 11.7167 0.333191 13.1667C0.333191 15.5 3.25819 17.3333 6.99986 17.3333C10.7415 17.3333 13.6665 15.5 13.6665 13.1667C13.6665 11.7167 12.5332 10.4083 10.6415 9.65834ZM6.16652 7.21667V13.1667C6.16652 13.3877 6.25432 13.5996 6.4106 13.7559C6.56688 13.9122 6.77884 14 6.99986 14C7.22087 14 7.43283 13.9122 7.58911 13.7559C7.74539 13.5996 7.83319 13.3877 7.83319 13.1667V7.21667C8.61874 7.01384 9.30335 6.53148 9.75869 5.86C10.214 5.18852 10.4088 4.37402 10.3066 3.56917C10.2044 2.76433 9.81214 2.0244 9.20338 1.48807C8.59463 0.951747 7.81117 0.655853 6.99986 0.655853C6.18855 0.655853 5.40508 0.951747 4.79633 1.48807C4.18757 2.0244 3.79532 2.76433 3.69309 3.56917C3.59086 4.37402 3.78568 5.18852 4.24102 5.86C4.69637 6.53148 5.38097 7.01384 6.16652 7.21667ZM6.99986 2.33334C7.32949 2.33334 7.65172 2.43109 7.92581 2.61422C8.19989 2.79736 8.41351 3.05766 8.53966 3.3622C8.6658 3.66674 8.69881 4.00185 8.6345 4.32516C8.57019 4.64846 8.41146 4.94543 8.17837 5.17852C7.94528 5.41161 7.64831 5.57034 7.32501 5.63465C7.00171 5.69896 6.66659 5.66595 6.36205 5.53981C6.05751 5.41366 5.79721 5.20004 5.61407 4.92596C5.43094 4.65187 5.33319 4.32964 5.33319 4.00001C5.33319 3.55798 5.50879 3.13406 5.82135 2.82149C6.13391 2.50893 6.55783 2.33334 6.99986 2.33334Z"
-                          fill="#C2C9D2"
-                        />
-                      </svg>
-                    </span>
-                    <span className="text-xs text-gray-500">Warsaw, Poland</span>
-                  </div>
-                  <div className="flex items-center mb-3">
-                    <span className="mr-3">
-                      <svg
-                        width={18}
-                        height={16}
-                        viewBox="0 0 18 16"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M14.833 3.41668H12.333V2.58334C12.333 1.9203 12.0696 1.28442 11.6008 0.815577C11.1319 0.346736 10.496 0.0833435 9.83299 0.0833435H8.16632C7.50328 0.0833435 6.86739 0.346736 6.39855 0.815577C5.92971 1.28442 5.66632 1.9203 5.66632 2.58334V3.41668H3.16632C2.50328 3.41668 1.86739 3.68007 1.39855 4.14891C0.929713 4.61775 0.666321 5.25363 0.666321 5.91668V13.4167C0.666321 14.0797 0.929713 14.7156 1.39855 15.1844C1.86739 15.6533 2.50328 15.9167 3.16632 15.9167H14.833C15.496 15.9167 16.1319 15.6533 16.6008 15.1844C17.0696 14.7156 17.333 14.0797 17.333 13.4167V5.91668C17.333 5.25363 17.0696 4.61775 16.6008 4.14891C16.1319 3.68007 15.496 3.41668 14.833 3.41668ZM7.33299 2.58334C7.33299 2.36233 7.42079 2.15037 7.57707 1.99409C7.73335 1.83781 7.94531 1.75001 8.16632 1.75001H9.83299C10.054 1.75001 10.266 1.83781 10.4222 1.99409C10.5785 2.15037 10.6663 2.36233 10.6663 2.58334V3.41668H7.33299V2.58334ZM15.6663 13.4167C15.6663 13.6377 15.5785 13.8497 15.4222 14.0059C15.266 14.1622 15.054 14.25 14.833 14.25H3.16632C2.94531 14.25 2.73335 14.1622 2.57707 14.0059C2.42079 13.8497 2.33299 13.6377 2.33299 13.4167V9.20834H4.83299V10.0833C4.83299 10.3044 4.92079 10.5163 5.07707 10.6726C5.23335 10.8289 5.44531 10.9167 5.66632 10.9167C5.88733 10.9167 6.0993 10.8289 6.25558 10.6726C6.41186 10.5163 6.49965 10.3044 6.49965 10.0833V9.20834H11.4997V10.0833C11.4997 10.3044 11.5875 10.5163 11.7437 10.6726C11.9 10.8289 12.112 10.9167 12.333 10.9167C12.554 10.9167 12.766 10.8289 12.9222 10.6726C13.0785 10.5163 13.1663 10.3044 13.1663 10.0833V9.20834H15.6663V13.4167ZM15.6663 7.58334H2.33299V5.91668C2.33299 5.69566 2.42079 5.4837 2.57707 5.32742C2.73335 5.17114 2.94531 5.08334 3.16632 5.08334H14.833C15.054 5.08334 15.266 5.17114 15.4222 5.32742C15.5785 5.4837 15.6663 5.69566 15.6663 5.91668V7.58334Z"
-                          fill="#C2C9D2"
-                        />
-                      </svg>
-                    </span>
-                    <span className="text-xs text-gray-500">Shuffle.dev</span>
-                  </div>
-                  <div className="flex items-center justify-between mb-10">
-                    <div className="flex items-center">
-                      <img
-                        className="w-8 h-8 rounded-full object-cover object-right"
-                        src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1050&q=80"
-                        alt=""
-                      />
-                      <img
-                        className="w-8 h-8 -ml-2 rounded-full object-cover"
-                        src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80"
-                        alt=""
-                      />
-                      <img
-                        className="w-8 h-8 -ml-2 rounded-full object-cover object-top"
-                        src="https://images.unsplash.com/photo-1528936466093-76ffdfcf7a40?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80"
-                        alt=""
-                      />
-                      <div className="inline-flex -ml-2 items-center justify-center w-8 h-8 rounded-full bg-indigo-50 text-xs font-medium text-indigo-500">
-                        +3
-                      </div>
-                    </div>
-                    <a href="#">
-                      <svg
-                        width={16}
-                        height={16}
-                        viewBox="0 0 16 16"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M8.00001 6.66666C7.26363 6.66666 6.66668 7.26362 6.66668 8C6.66668 8.73637 7.26363 9.33333 8.00001 9.33333C8.73639 9.33333 9.33334 8.73637 9.33334 7.99999C9.33334 7.26362 8.73639 6.66666 8.00001 6.66666Z"
-                          fill="#E1E4E8"
-                        />
-                        <path
-                          d="M12.6667 6.66666C11.9303 6.66666 11.3333 7.26362 11.3333 8C11.3333 8.73637 11.9303 9.33333 12.6667 9.33333C13.403 9.33333 14 8.73637 14 7.99999C14 7.26362 13.403 6.66666 12.6667 6.66666Z"
-                          fill="#E1E4E8"
-                        />
-                        <path
-                          d="M3.33332 6.66666C2.59694 6.66666 1.99999 7.26362 1.99999 8C1.99999 8.73637 2.59694 9.33333 3.33332 9.33333C4.0697 9.33333 4.66666 8.73637 4.66666 7.99999C4.66666 7.26362 4.0697 6.66666 3.33332 6.66666Z"
-                          fill="#E1E4E8"
-                        />
-                      </svg>
-                    </a>
-                  </div>
-                  <div className="relative w-full h-1 mb-3 rounded-full bg-gray-50">
-                    <div className="absolute top-0 left-0 h-full w-1/2 rounded-full bg-purple-500" />
-                  </div>
-                  <div className="flex items-center">
-                    <span className="inline-block py-1 px-2 mr-2 bg-indigo-50 rounded-full text-xs text-indigo-500">
-                      Phase 2
-                    </span>
-                    <span className="text-xs text-gray-500 font-medium">
-                      Implementation
-                    </span>
-                  </div>
-                </div>
+      </nav>
+      <a className="navbar-close absolute top-5 p-4 right-3" href="#">
+        <svg
+          width={12}
+          height={12}
+          viewBox="0 0 12 12"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M6.94004 6L11.14 1.80667C11.2656 1.68113 11.3361 1.51087 11.3361 1.33333C11.3361 1.1558 11.2656 0.985537 11.14 0.860002C11.0145 0.734466 10.8442 0.66394 10.6667 0.66394C10.4892 0.66394 10.3189 0.734466 10.1934 0.860002L6.00004 5.06L1.80671 0.860002C1.68117 0.734466 1.51091 0.663941 1.33337 0.663941C1.15584 0.663941 0.985576 0.734466 0.860041 0.860002C0.734505 0.985537 0.66398 1.1558 0.66398 1.33333C0.66398 1.51087 0.734505 1.68113 0.860041 1.80667L5.06004 6L0.860041 10.1933C0.797555 10.2553 0.747959 10.329 0.714113 10.4103C0.680267 10.4915 0.662842 10.5787 0.662842 10.6667C0.662842 10.7547 0.680267 10.8418 0.714113 10.9231C0.747959 11.0043 0.797555 11.078 0.860041 11.14C0.922016 11.2025 0.99575 11.2521 1.07699 11.2859C1.15823 11.3198 1.24537 11.3372 1.33337 11.3372C1.42138 11.3372 1.50852 11.3198 1.58976 11.2859C1.671 11.2521 1.74473 11.2025 1.80671 11.14L6.00004 6.94L10.1934 11.14C10.2554 11.2025 10.3291 11.2521 10.4103 11.2859C10.4916 11.3198 10.5787 11.3372 10.6667 11.3372C10.7547 11.3372 10.8419 11.3198 10.9231 11.2859C11.0043 11.2521 11.0781 11.2025 11.14 11.14C11.2025 11.078 11.2521 11.0043 11.286 10.9231C11.3198 10.8418 11.3372 10.7547 11.3372 10.6667C11.3372 10.5787 11.3198 10.4915 11.286 10.4103C11.2521 10.329 11.2025 10.2553 11.14 10.1933L6.94004 6Z"
+            fill="#556987"
+          />
+        </svg>
+      </a>
+    </div>
+  </div>
+</section>
+<section
+  className="relative bg-white overflow-hidden"
+  style={{
+    backgroundImage: 'url("flex-ui-assets/elements/pattern-white.svg")',
+    backgroundPosition: "center"
+  }}
+>
+  <div className="bg-tarnsparent">
+    <nav className="flex justify-between p-6 px-4">
+      <div className="flex justify-between items-center w-full">
+        <div className="w-1/2 xl:w-1/3">
+          <a className="block max-w-max" href="#">
+            <img
+              className="h-8"
+              src="flex-ui-assets/logos/flex-ui-violet-light.svg"
+              alt=""
+            />
+          </a>
+        </div>
+        <div className="w-1/2 xl:w-1/3">
+          <ul className="hidden xl:flex xl:justify-center">
+            <li className="mr-12">
+              <a
+                className="text-coolGray-500 hover:text-coolGray-900 font-medium"
+                href="#"
+              >
+                Product
+              </a>
+            </li>
+            <li className="mr-12">
+              <a
+                className="text-coolGray-500 hover:text-coolGray-900 font-medium"
+                href="#"
+              >
+                Features
+              </a>
+            </li>
+            <li className="mr-12">
+              <a
+                className="text-coolGray-500 hover:text-coolGray-900 font-medium"
+                href="#"
+              >
+                Resources
+              </a>
+            </li>
+            <li>
+              <a
+                className="text-coolGray-500 hover:text-coolGray-900 font-medium"
+                href="#"
+              >
+                Pricing
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div className="w-1/2 xl:w-1/3">
+          <div className="hidden xl:flex items-center justify-end">
+            <a
+              className="inline-block py-2 px-4 mr-2 leading-5 text-coolGray-500 hover:text-coolGray-900 bg-transparent font-medium rounded-md"
+              href="#"
+            >
+              Log In
+            </a>
+            <a
+              className="inline-block py-2 px-4 text-sm leading-5 text-violet-50 bg-violet-500 hover:bg-violet-600 font-medium focus:ring-2 focus:ring-violet-500 focus:ring-opacity-50 rounded-md"
+              href="#"
+            >
+              Sign Up
+            </a>
+          </div>
+        </div>
+      </div>
+      <button className="navbar-burger self-center xl:hidden">
+        <svg
+          width={35}
+          height={35}
+          viewBox="0 0 32 32"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <rect
+            className="text-coolGray-50"
+            width={32}
+            height={32}
+            rx={6}
+            fill="currentColor"
+          />
+          <path
+            className="text-coolGray-500"
+            d="M7 12H25C25.2652 12 25.5196 11.8946 25.7071 11.7071C25.8946 11.5196 26 11.2652 26 11C26 10.7348 25.8946 10.4804 25.7071 10.2929C25.5196 10.1054 25.2652 10 25 10H7C6.73478 10 6.48043 10.1054 6.29289 10.2929C6.10536 10.4804 6 10.7348 6 11C6 11.2652 6.10536 11.5196 6.29289 11.7071C6.48043 11.8946 6.73478 12 7 12ZM25 15H7C6.73478 15 6.48043 15.1054 6.29289 15.2929C6.10536 15.4804 6 15.7348 6 16C6 16.2652 6.10536 16.5196 6.29289 16.7071C6.48043 16.8946 6.73478 17 7 17H25C25.2652 17 25.5196 16.8946 25.7071 16.7071C25.8946 16.5196 26 16.2652 26 16C26 15.7348 25.8946 15.4804 25.7071 15.2929C25.5196 15.1054 25.2652 15 25 15ZM25 20H7C6.73478 20 6.48043 20.1054 6.29289 20.2929C6.10536 20.4804 6 20.7348 6 21C6 21.2652 6.10536 21.5196 6.29289 21.7071C6.48043 21.8946 6.73478 22 7 22H25C25.2652 22 25.5196 21.8946 25.7071 21.7071C25.8946 21.5196 26 21.2652 26 21C26 20.7348 25.8946 20.4804 25.7071 20.2929C25.5196 20.1054 25.2652 20 25 20Z"
+            fill="currentColor"
+          />
+        </svg>
+      </button>
+    </nav>
+    <div className="navbar-menu hidden fixed top-0 left-0 z-50 w-full h-full bg-coolGray-900 bg-opacity-50">
+      <div className="fixed top-0 left-0 bottom-0 w-full w-4/6 max-w-xs bg-white">
+        <nav className="relative p-6 h-full overflow-y-auto">
+          <div className="flex flex-col justify-between h-full">
+            <a className="inline-block" href="#">
+              <img
+                className="h-8"
+                src="flex-ui-assets/logos/flex-ui-violet-light.svg"
+                alt=""
+              />
+            </a>
+            <ul className="py-6">
+              <li>
+                <a
+                  className="block py-3 px-4 text-coolGray-500 hover:text-coolGray-900 font-medium hover:bg-coolGray-50 rounded-md"
+                  href="#"
+                >
+                  Product
+                </a>
+              </li>
+              <li>
+                <a
+                  className="block py-3 px-4 text-coolGray-500 hover:text-coolGray-900 font-medium hover:bg-coolGray-50 rounded-md"
+                  href="#"
+                >
+                  Features
+                </a>
+              </li>
+              <li>
+                <a
+                  className="block py-3 px-4 text-coolGray-500 hover:text-coolGray-900 font-medium hover:bg-coolGray-50 rounded-md"
+                  href="#"
+                >
+                  Pricing
+                </a>
+              </li>
+              <li>
+                <a
+                  className="block py-3 px-4 text-coolGray-500 hover:text-coolGray-900 font-medium hover:bg-coolGray-50 rounded-md"
+                  href="#"
+                >
+                  Resources
+                </a>
+              </li>
+            </ul>
+            <div className="flex flex-wrap">
+              <div className="w-full mb-2">
+                <a
+                  className="inline-block py-2 px-4 w-full text-sm leading-5 text-coolGray-500 hover:text-coolGray-900 bg-transparent font-medium text-center rounded-md"
+                  href="#"
+                >
+                  Log In
+                </a>
               </div>
-            </div>
-            <div className="w-full md:w-1/2 lg:w-1/4 p-4">
-              <div className="p-6 bg-white rounded">
-                <div className="flex items-center mb-6">
-                  <span className="flex-shrink-0 inline-flex justify-center items-center mr-3 w-10 h-10 rounded-full bg-orange-500">
-                    <svg
-                      width={18}
-                      height={16}
-                      viewBox="0 0 18 16"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M14.8335 2.58333H9.60016L9.33349 1.75C9.16062 1.26102 8.83995 0.837918 8.41591 0.539299C7.99187 0.24068 7.48546 0.0813322 6.96683 0.0833316H3.16682C2.50378 0.0833316 1.8679 0.346724 1.39906 0.815565C0.930217 1.28441 0.666824 1.92029 0.666824 2.58333V13.4167C0.666824 14.0797 0.930217 14.7156 1.39906 15.1844C1.8679 15.6533 2.50378 15.9167 3.16682 15.9167H14.8335C15.4965 15.9167 16.1324 15.6533 16.6013 15.1844C17.0701 14.7156 17.3335 14.0797 17.3335 13.4167V5.08333C17.3335 4.42029 17.0701 3.78441 16.6013 3.31557C16.1324 2.84672 15.4965 2.58333 14.8335 2.58333ZM15.6668 13.4167C15.6668 13.6377 15.579 13.8496 15.4227 14.0059C15.2665 14.1622 15.0545 14.25 14.8335 14.25H3.16682C2.94581 14.25 2.73385 14.1622 2.57757 14.0059C2.42129 13.8496 2.33349 13.6377 2.33349 13.4167V2.58333C2.33349 2.36232 2.42129 2.15036 2.57757 1.99408C2.73385 1.8378 2.94581 1.75 3.16682 1.75H6.96683C7.14153 1.74955 7.31195 1.80401 7.45402 1.9057C7.59608 2.00739 7.70259 2.15115 7.75849 2.31667L8.20849 3.68333C8.2644 3.84885 8.37091 3.99261 8.51297 4.0943C8.65503 4.19598 8.82545 4.25045 9.00016 4.25H14.8335C15.0545 4.25 15.2665 4.3378 15.4227 4.49408C15.579 4.65036 15.6668 4.86232 15.6668 5.08333V13.4167Z"
-                        fill="#FDE4D4"
-                      />
-                    </svg>
-                  </span>
-                  <div>
-                    <p className="text-xs font-bold">
-                      Example project name here dolor sit
-                    </p>
-                  </div>
-                </div>
-                <div>
-                  <div className="flex items-center mb-3">
-                    <span className="mr-3">
-                      <svg
-                        width={14}
-                        height={18}
-                        viewBox="0 0 14 18"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M10.6415 9.65834C10.5397 9.61785 10.431 9.5978 10.3215 9.59934C10.212 9.60088 10.1038 9.62397 10.0032 9.66731C9.90261 9.71064 9.81153 9.77337 9.73518 9.8519C9.65882 9.93043 9.59868 10.0232 9.55819 10.125C9.5177 10.2268 9.49765 10.3355 9.49919 10.4451C9.50073 10.5546 9.52382 10.6627 9.56716 10.7633C9.61049 10.8639 9.67321 10.955 9.75175 11.0314C9.83028 11.1077 9.92308 11.1678 10.0249 11.2083C11.2415 11.6917 11.9999 12.4417 11.9999 13.1667C11.9999 14.35 9.94986 15.6667 6.99986 15.6667C4.04986 15.6667 1.99986 14.35 1.99986 13.1667C1.99986 12.4417 2.75819 11.6917 3.97486 11.2083C4.1804 11.1266 4.34504 10.9665 4.43256 10.7633C4.52007 10.5602 4.5233 10.3305 4.44152 10.125C4.35975 9.91946 4.19967 9.75482 3.99651 9.66731C3.79334 9.57979 3.56373 9.57656 3.35819 9.65834C1.46652 10.4083 0.333191 11.7167 0.333191 13.1667C0.333191 15.5 3.25819 17.3333 6.99986 17.3333C10.7415 17.3333 13.6665 15.5 13.6665 13.1667C13.6665 11.7167 12.5332 10.4083 10.6415 9.65834ZM6.16652 7.21667V13.1667C6.16652 13.3877 6.25432 13.5996 6.4106 13.7559C6.56688 13.9122 6.77884 14 6.99986 14C7.22087 14 7.43283 13.9122 7.58911 13.7559C7.74539 13.5996 7.83319 13.3877 7.83319 13.1667V7.21667C8.61874 7.01384 9.30335 6.53148 9.75869 5.86C10.214 5.18852 10.4088 4.37402 10.3066 3.56917C10.2044 2.76433 9.81214 2.0244 9.20338 1.48807C8.59463 0.951747 7.81117 0.655853 6.99986 0.655853C6.18855 0.655853 5.40508 0.951747 4.79633 1.48807C4.18757 2.0244 3.79532 2.76433 3.69309 3.56917C3.59086 4.37402 3.78568 5.18852 4.24102 5.86C4.69637 6.53148 5.38097 7.01384 6.16652 7.21667ZM6.99986 2.33334C7.32949 2.33334 7.65172 2.43109 7.92581 2.61422C8.19989 2.79736 8.41351 3.05766 8.53966 3.3622C8.6658 3.66674 8.69881 4.00185 8.6345 4.32516C8.57019 4.64846 8.41146 4.94543 8.17837 5.17852C7.94528 5.41161 7.64831 5.57034 7.32501 5.63465C7.00171 5.69896 6.66659 5.66595 6.36205 5.53981C6.05751 5.41366 5.79721 5.20004 5.61407 4.92596C5.43094 4.65187 5.33319 4.32964 5.33319 4.00001C5.33319 3.55798 5.50879 3.13406 5.82135 2.82149C6.13391 2.50893 6.55783 2.33334 6.99986 2.33334Z"
-                          fill="#C2C9D2"
-                        />
-                      </svg>
-                    </span>
-                    <span className="text-xs text-gray-500">Warsaw, Poland</span>
-                  </div>
-                  <div className="flex items-center mb-3">
-                    <span className="mr-3">
-                      <svg
-                        width={18}
-                        height={16}
-                        viewBox="0 0 18 16"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M14.833 3.41668H12.333V2.58334C12.333 1.9203 12.0696 1.28442 11.6008 0.815577C11.1319 0.346736 10.496 0.0833435 9.83299 0.0833435H8.16632C7.50328 0.0833435 6.86739 0.346736 6.39855 0.815577C5.92971 1.28442 5.66632 1.9203 5.66632 2.58334V3.41668H3.16632C2.50328 3.41668 1.86739 3.68007 1.39855 4.14891C0.929713 4.61775 0.666321 5.25363 0.666321 5.91668V13.4167C0.666321 14.0797 0.929713 14.7156 1.39855 15.1844C1.86739 15.6533 2.50328 15.9167 3.16632 15.9167H14.833C15.496 15.9167 16.1319 15.6533 16.6008 15.1844C17.0696 14.7156 17.333 14.0797 17.333 13.4167V5.91668C17.333 5.25363 17.0696 4.61775 16.6008 4.14891C16.1319 3.68007 15.496 3.41668 14.833 3.41668ZM7.33299 2.58334C7.33299 2.36233 7.42079 2.15037 7.57707 1.99409C7.73335 1.83781 7.94531 1.75001 8.16632 1.75001H9.83299C10.054 1.75001 10.266 1.83781 10.4222 1.99409C10.5785 2.15037 10.6663 2.36233 10.6663 2.58334V3.41668H7.33299V2.58334ZM15.6663 13.4167C15.6663 13.6377 15.5785 13.8497 15.4222 14.0059C15.266 14.1622 15.054 14.25 14.833 14.25H3.16632C2.94531 14.25 2.73335 14.1622 2.57707 14.0059C2.42079 13.8497 2.33299 13.6377 2.33299 13.4167V9.20834H4.83299V10.0833C4.83299 10.3044 4.92079 10.5163 5.07707 10.6726C5.23335 10.8289 5.44531 10.9167 5.66632 10.9167C5.88733 10.9167 6.0993 10.8289 6.25558 10.6726C6.41186 10.5163 6.49965 10.3044 6.49965 10.0833V9.20834H11.4997V10.0833C11.4997 10.3044 11.5875 10.5163 11.7437 10.6726C11.9 10.8289 12.112 10.9167 12.333 10.9167C12.554 10.9167 12.766 10.8289 12.9222 10.6726C13.0785 10.5163 13.1663 10.3044 13.1663 10.0833V9.20834H15.6663V13.4167ZM15.6663 7.58334H2.33299V5.91668C2.33299 5.69566 2.42079 5.4837 2.57707 5.32742C2.73335 5.17114 2.94531 5.08334 3.16632 5.08334H14.833C15.054 5.08334 15.266 5.17114 15.4222 5.32742C15.5785 5.4837 15.6663 5.69566 15.6663 5.91668V7.58334Z"
-                          fill="#C2C9D2"
-                        />
-                      </svg>
-                    </span>
-                    <span className="text-xs text-gray-500">Shuffle.dev</span>
-                  </div>
-                  <div className="flex items-center justify-between mb-10">
-                    <div className="flex items-center">
-                      <img
-                        className="w-8 h-8 rounded-full object-cover object-right"
-                        src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1050&q=80"
-                        alt=""
-                      />
-                      <img
-                        className="w-8 h-8 -ml-2 rounded-full object-cover"
-                        src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80"
-                        alt=""
-                      />
-                      <img
-                        className="w-8 h-8 -ml-2 rounded-full object-cover object-top"
-                        src="https://images.unsplash.com/photo-1528936466093-76ffdfcf7a40?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80"
-                        alt=""
-                      />
-                      <div className="inline-flex -ml-2 items-center justify-center w-8 h-8 rounded-full bg-indigo-50 text-xs font-medium text-indigo-500">
-                        +3
-                      </div>
-                    </div>
-                    <a href="#">
-                      <svg
-                        width={16}
-                        height={16}
-                        viewBox="0 0 16 16"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M8.00001 6.66666C7.26363 6.66666 6.66668 7.26362 6.66668 8C6.66668 8.73637 7.26363 9.33333 8.00001 9.33333C8.73639 9.33333 9.33334 8.73637 9.33334 7.99999C9.33334 7.26362 8.73639 6.66666 8.00001 6.66666Z"
-                          fill="#E1E4E8"
-                        />
-                        <path
-                          d="M12.6667 6.66666C11.9303 6.66666 11.3333 7.26362 11.3333 8C11.3333 8.73637 11.9303 9.33333 12.6667 9.33333C13.403 9.33333 14 8.73637 14 7.99999C14 7.26362 13.403 6.66666 12.6667 6.66666Z"
-                          fill="#E1E4E8"
-                        />
-                        <path
-                          d="M3.33332 6.66666C2.59694 6.66666 1.99999 7.26362 1.99999 8C1.99999 8.73637 2.59694 9.33333 3.33332 9.33333C4.0697 9.33333 4.66666 8.73637 4.66666 7.99999C4.66666 7.26362 4.0697 6.66666 3.33332 6.66666Z"
-                          fill="#E1E4E8"
-                        />
-                      </svg>
-                    </a>
-                  </div>
-                  <div className="relative w-full h-1 mb-3 rounded-full bg-gray-50">
-                    <div className="absolute top-0 left-0 h-full w-1/6 rounded-full bg-orange-500" />
-                  </div>
-                  <div className="flex items-center">
-                    <span className="inline-block py-1 px-2 mr-2 bg-indigo-50 rounded-full text-xs text-indigo-500">
-                      Phase 1
-                    </span>
-                    <span className="text-xs text-gray-500 font-medium">
-                      Getting started
-                    </span>
-                  </div>
-                </div>
+              <div className="w-full">
+                <a
+                  className="inline-block py-2 px-4 w-full text-sm leading-5 text-white bg-violet-500 hover:bg-violet-600 font-medium text-center focus:ring-2 focus:ring-violet-500 focus:ring-opacity-50 rounded-md"
+                  href="#"
+                >
+                  Sign Up
+                </a>
               </div>
             </div>
           </div>
-        </div>
-      </section>
-
-      <section className="font-medium bg-white py-24 2xl:py-44">
-        <div className="container px-4 mx-auto">
-          <h2 className="font-heading text-9xl md:text-10xl xl:text-11xl leading-tight mb-10">
-            Plans
-          </h2>
-          <p className="text-lg leading-6 font-normal text-darkBlueGray-400 mb-20 lg:mb-36">
-            Sed porttitor turpis sit amet malesuada porta. Vivamus lobortis blandit
-            lorem ut posuere.
+        </nav>
+        <a className="navbar-close absolute top-5 p-4 right-3" href="#">
+          <svg
+            width={12}
+            height={12}
+            viewBox="0 0 12 12"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M6.94004 6L11.14 1.80667C11.2656 1.68113 11.3361 1.51087 11.3361 1.33333C11.3361 1.1558 11.2656 0.985537 11.14 0.860002C11.0145 0.734466 10.8442 0.66394 10.6667 0.66394C10.4892 0.66394 10.3189 0.734466 10.1934 0.860002L6.00004 5.06L1.80671 0.860002C1.68117 0.734466 1.51091 0.663941 1.33337 0.663941C1.15584 0.663941 0.985576 0.734466 0.860041 0.860002C0.734505 0.985537 0.66398 1.1558 0.66398 1.33333C0.66398 1.51087 0.734505 1.68113 0.860041 1.80667L5.06004 6L0.860041 10.1933C0.797555 10.2553 0.747959 10.329 0.714113 10.4103C0.680267 10.4915 0.662842 10.5787 0.662842 10.6667C0.662842 10.7547 0.680267 10.8418 0.714113 10.9231C0.747959 11.0043 0.797555 11.078 0.860041 11.14C0.922016 11.2025 0.99575 11.2521 1.07699 11.2859C1.15823 11.3198 1.24537 11.3372 1.33337 11.3372C1.42138 11.3372 1.50852 11.3198 1.58976 11.2859C1.671 11.2521 1.74473 11.2025 1.80671 11.14L6.00004 6.94L10.1934 11.14C10.2554 11.2025 10.3291 11.2521 10.4103 11.2859C10.4916 11.3198 10.5787 11.3372 10.6667 11.3372C10.7547 11.3372 10.8419 11.3198 10.9231 11.2859C11.0043 11.2521 11.0781 11.2025 11.14 11.14C11.2025 11.078 11.2521 11.0043 11.286 10.9231C11.3198 10.8418 11.3372 10.7547 11.3372 10.6667C11.3372 10.5787 11.3198 10.4915 11.286 10.4103C11.2521 10.329 11.2025 10.2553 11.14 10.1933L6.94004 6Z"
+              fill="#556987"
+            />
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div className="py-20 md:py-28">
+    <div className="container px-4 mx-auto">
+      <div className="flex flex-wrap xl:items-center -mx-4">
+        <div className="w-full md:w-1/2 px-4 mb-16 md:mb-0">
+          <span className="inline-block py-px px-2 mb-4 text-xs leading-5 text-white bg-violet-500 uppercase rounded-9xl">
+            Header
+          </span>
+          <h1 className="mb-6 text-3xl md:text-5xl lg:text-6xl leading-tight font-bold tracking-tight">
+            A small business is only as good as its tools.
+          </h1>
+          <p className="mb-8 text-lg md:text-xl text-coolGray-500 font-medium">
+            We’re different. Flex is the only saas business platform that lets
+            you run your business on one platform, seamlessly across all digital
+            channels.
           </p>
-          <div className="md:grid md:grid-cols-2 xl:grid-cols-4 border border-gray-100 rounded-5xl overflow-hidden">
-            <div className="py-16 px-6 md:px-10 flex flex-col justify-between md:border-b border-gray-100 xl:border-b-0">
-              <div>
-                <div className="flex justify-between items-center mb-8">
-                  <h3 className="mr-2 font-heading text-6xl md:text-7xl leading-10 tracking-tight">
-                    Beginner
-                  </h3>
-                  <div className="relative max-w-max">
-                    <img
-                      className="w-14 h-14"
-                      src="uinel-assets/elements/pricing/circle1.svg"
-                      alt=""
-                    />
-                    <span className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-3xl md:text-6xl">
-                      X
-                    </span>
-                  </div>
-                </div>
-                <div className="font-heading text-3xl flex items-center mb-14">
-                  <span className="text-base mr-2 -mb-1">$</span>
-                  <span>8.80</span>
-                </div>
-                <h3 className="font-heading text-base tracking-tighter leading-5 mb-6">
-                  What's included
-                </h3>
-                <ul className="mb-14 xl:mb-36">
-                  <li className="flex items-start leading-6 font-normal text-darkBlueGray-400 mb-3">
-                    <img
-                      className="relative top-1 pt-px mr-6"
-                      src="uinel-assets/elements/pricing/checked.svg"
-                      alt=""
-                    />
-                    <span>Complete tools</span>
-                  </li>
-                  <li className="flex items-start leading-6 font-normal text-darkBlueGray-400 mb-3">
-                    <img
-                      className="relative top-1 pt-px mr-6"
-                      src="uinel-assets/elements/pricing/checked.svg"
-                      alt=""
-                    />
-                    <span>10GB cloud storage</span>
-                  </li>
-                  <li className="flex items-start leading-6 font-normal text-darkBlueGray-400">
-                    <img
-                      className="relative top-1 pt-px mr-6"
-                      src="uinel-assets/elements/pricing/checked.svg"
-                      alt=""
-                    />
-                    <span>5 team members</span>
-                  </li>
-                </ul>
-              </div>
+          <div className="flex flex-wrap">
+            <div className="w-full md:w-auto py-1 md:py-0 md:mr-4">
               <a
-                className="block py-3 px-10 md:mx-auto w-full md:w-auto text-xl leading-7 text-white font-medium tracking-tighter font-heading text-center bg-purple-500 hover:bg-purple-600 focus:ring-2 focus:ring-purple-500 focus:ring-opacity-50 rounded-xl"
+                className="inline-block py-5 px-7 w-full text-base md:text-lg leading-4 text-violet-50 font-medium text-center bg-violet-500 hover:bg-violet-600 focus:ring-2 focus:ring-violet-500 focus:ring-opacity-50 border border-violet-500 rounded-md shadow-sm"
                 href="#"
               >
-                Get started
+                Request a Demo
               </a>
             </div>
-            <div className="bg-gray-50 py-16 px-6 md:px-10 flex flex-col justify-between md:border-b border-gray-100 xl:border-b-0">
-              <div>
-                <div className="flex justify-between items-center mb-8">
-                  <h3 className="font-heading text-6xl md:text-7xl leading-10 tracking-tight">
-                    Students
-                  </h3>
-                  <div className="relative max-w-max">
-                    <img
-                      className="w-14 h-14"
-                      src="uinel-assets/elements/pricing/circle2.svg"
-                      alt=""
-                    />
-                    <span className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-3xl md:text-6xl">
-                      I
-                    </span>
-                  </div>
-                </div>
-                <div className="mb-14 flex items-center justify-between">
-                  <div className="font-heading text-3xl flex items-center">
-                    <span className="text-base mr-2 -mb-1">$</span>
-                    <span>15.90</span>
-                  </div>
-                  <div className="bg-white rounded-8xl py-2 px-3 uppercase text-xs font-bold tracking-wider text-gray-300">
-                    20% off
-                  </div>
-                </div>
-                <h3 className="font-heading text-base tracking-tighter leading-5 mb-6">
-                  What's included
-                </h3>
-                <ul className="mb-14 xl:mb-36">
-                  <li className="flex items-start leading-6 font-normal text-darkBlueGray-400 mb-3">
-                    <img
-                      className="relative top-1 pt-px mr-6"
-                      src="uinel-assets/elements/pricing/checked.svg"
-                      alt=""
-                    />
-                    <span>Complete tools</span>
-                  </li>
-                  <li className="flex items-start leading-6 font-normal text-darkBlueGray-400 mb-3">
-                    <img
-                      className="relative top-1 pt-px mr-6"
-                      src="uinel-assets/elements/pricing/checked.svg"
-                      alt=""
-                    />
-                    <span>10GB cloud storage</span>
-                  </li>
-                  <li className="flex items-start leading-6 font-normal text-darkBlueGray-400">
-                    <img
-                      className="relative top-1 pt-px mr-6"
-                      src="uinel-assets/elements/pricing/checked.svg"
-                      alt=""
-                    />
-                    <span>Unlimited anonymous board editors</span>
-                  </li>
-                </ul>
-              </div>
+            <div className="w-full md:w-auto py-1 md:py-0">
               <a
-                className="block py-3 px-10 md:mx-auto w-full md:w-auto text-xl leading-7 text-white font-medium tracking-tighter font-heading text-center bg-purple-500 hover:bg-purple-600 focus:ring-2 focus:ring-purple-500 focus:ring-opacity-50 rounded-xl"
+                className="inline-block py-5 px-7 w-full text-base md:text-lg leading-4 text-coolGray-800 font-medium text-center bg-white hover:bg-coolGray-100 focus:ring-2 focus:ring-coolGray-200 focus:ring-opacity-50 border border-coolGray-200 rounded-md shadow-sm"
                 href="#"
               >
-                Let's go
-              </a>
-            </div>
-            <div className="py-16 px-6 md:px-10 flex flex-col justify-between">
-              <div>
-                <div className="flex justify-between items-center mb-8">
-                  <h3 className="font-heading text-6xl md:text-7xl leading-10 tracking-tight">
-                    Team
-                  </h3>
-                  <div className="relative max-w-max">
-                    <img
-                      className="w-14 h-14"
-                      src="uinel-assets/elements/pricing/circle3.svg"
-                      alt=""
-                    />
-                    <span className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-3xl md:text-6xl">
-                      Y
-                    </span>
-                  </div>
-                </div>
-                <div className="font-heading text-3xl flex items-center mb-14">
-                  <span className="text-base mr-2 -mb-1">$</span>
-                  <span>29.90</span>
-                </div>
-                <h3 className="font-heading text-base tracking-tighter leading-5 mb-6">
-                  What's included
-                </h3>
-                <ul className="mb-14 xl:mb-36">
-                  <li className="flex items-start leading-6 font-normal text-darkBlueGray-400 mb-3">
-                    <img
-                      className="relative top-1 pt-px mr-6"
-                      src="uinel-assets/elements/pricing/checked.svg"
-                      alt=""
-                    />
-                    <span>Complete tools</span>
-                  </li>
-                  <li className="flex items-start leading-6 font-normal text-darkBlueGray-400 mb-3">
-                    <img
-                      className="relative top-1 pt-px mr-6"
-                      src="uinel-assets/elements/pricing/checked.svg"
-                      alt=""
-                    />
-                    <span>35 plugins for Designers</span>
-                  </li>
-                  <li className="flex items-start leading-6 font-normal text-darkBlueGray-400 mb-3">
-                    <img
-                      className="relative top-1 pt-px mr-6"
-                      src="uinel-assets/elements/pricing/checked.svg"
-                      alt=""
-                    />
-                    <span>200GB cloud storage</span>
-                  </li>
-                  <li className="flex items-start leading-6 font-normal text-darkBlueGray-400">
-                    <img
-                      className="relative top-1 pt-px mr-6"
-                      src="uinel-assets/elements/pricing/checked.svg"
-                      alt=""
-                    />
-                    <span>100+ team members</span>
-                  </li>
-                </ul>
-              </div>
-              <a
-                className="block py-3 px-10 md:mx-auto w-full md:w-auto text-xl leading-7 text-white font-medium tracking-tighter font-heading text-center bg-purple-500 hover:bg-purple-600 focus:ring-2 focus:ring-purple-500 focus:ring-opacity-50 rounded-xl"
-                href="#"
-              >
-                Buy now
-              </a>
-            </div>
-            <div className="bg-gray-50 py-16 px-6 md:px-10 flex flex-col justify-between">
-              <div>
-                <div className="flex justify-between items-center mb-8">
-                  <h3 className="font-heading text-6xl md:text-7xl leading-10 tracking-tight">
-                    Business
-                  </h3>
-                  <div className="relative max-w-max">
-                    <img
-                      className="w-14 h-14"
-                      src="uinel-assets/elements/pricing/circle4.svg"
-                      alt=""
-                    />
-                    <span className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-3xl md:text-6xl">
-                      O
-                    </span>
-                  </div>
-                </div>
-                <div className="font-heading text-3xl flex items-center mb-14">
-                  <span className="text-base mr-2 -mb-1">$</span>
-                  <span>44.90</span>
-                </div>
-                <h3 className="font-heading text-base tracking-tighter leading-5 mb-6">
-                  What's included
-                </h3>
-                <ul className="mb-14 xl:mb-36">
-                  <li className="flex items-start leading-6 font-normal text-darkBlueGray-400 mb-3">
-                    <img
-                      className="relative top-1 pt-px mr-6"
-                      src="uinel-assets/elements/pricing/checked.svg"
-                      alt=""
-                    />
-                    <span>Complete tools</span>
-                  </li>
-                  <li className="flex items-start leading-6 font-normal text-darkBlueGray-400 mb-3">
-                    <img
-                      className="relative top-1 pt-px mr-6"
-                      src="uinel-assets/elements/pricing/checked.svg"
-                      alt=""
-                    />
-                    <span>35 plugins for Designers</span>
-                  </li>
-                  <li className="flex items-start leading-6 font-normal text-darkBlueGray-400 mb-3">
-                    <img
-                      className="relative top-1 pt-px mr-6"
-                      src="uinel-assets/elements/pricing/checked.svg"
-                      alt=""
-                    />
-                    <span>500GB cloud storage</span>
-                  </li>
-                  <li className="flex items-start leading-6 font-normal text-darkBlueGray-400">
-                    <img
-                      className="relative top-1 pt-px mr-6"
-                      src="uinel-assets/elements/pricing/checked.svg"
-                      alt=""
-                    />
-                    <span>200+ team members</span>
-                  </li>
-                </ul>
-              </div>
-              <a
-                className="block py-3 px-10 md:mx-auto w-full md:w-auto text-xl leading-7 text-white font-medium tracking-tighter font-heading text-center bg-purple-500 hover:bg-purple-600 focus:ring-2 focus:ring-purple-500 focus:ring-opacity-50 rounded-xl"
-                href="#"
-              >
-                Get started
+                Sign Up
               </a>
             </div>
           </div>
         </div>
-      </section>
+        <div className="w-full md:w-1/2 px-4">
+          <div className="relative mx-auto md:mr-0 max-w-max">
+            <img
+              className="absolute z-10 -left-14 -top-12 w-28 md:w-auto"
+              src="flex-ui-assets/elements/circle3-green.svg"
+              alt=""
+            />
+            <img
+              className="absolute z-10 -right-7 -bottom-8 w-28 md:w-auto"
+              src="flex-ui-assets/elements/dots3-yellow.svg"
+              alt=""
+            />
+            <img
+              className="relative rounded-7xl"
+              src="flex-ui-assets/images/headers/header.jpg"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-      <section className="py-24 2xl:pt-40 2xl:pb-52 bg-white">
-        <div className="container px-6 mx-auto">
-          <div className="mb-20 2xl:mb-36 text-center">
-            <span className="block mb-9 text-xs leading-4 font-medium uppercase tracking-widest text-gray-300">
-              How it works
-            </span>
-            <h2 className="text-9xl md:text-10xl xl:text-11xl leading-none font-heading font-medium">
-              Easy to use
-            </h2>
+
+
+<section
+  className="py-24 md:pb-32 bg-white"
+  style={{
+    backgroundImage: 'url("flex-ui-assets/elements/pattern-white.svg")',
+    backgroundPosition: "center"
+  }}
+>
+  <div className="container px-4 mx-auto">
+    <div className="md:max-w-4xl mb-12 mx-auto text-center">
+      <span className="inline-block py-px px-2 mb-4 text-xs leading-5 text-violet-500 bg-violet-100 font-medium uppercase rounded-full shadow-sm">
+        Features
+      </span>
+      <h1 className="mb-4 text-3xl md:text-4xl leading-tight font-bold tracking-tighter">
+        Gain more insight into how people use your
+      </h1>
+      <p className="text-lg md:text-xl text-coolGray-500 font-medium">
+        With our integrated CRM, project management, collaboration and invoicing
+        capabilities, you can manage every aspect of your business in one secure
+        platform.
+      </p>
+    </div>
+    <div className="flex flex-wrap -mx-4">
+      <div className="w-full md:w-1/2 lg:w-1/3 px-4">
+        <div className="h-full p-8 text-center hover:bg-white rounded-md hover:shadow-xl transition duration-200">
+          <div className="inline-flex h-16 w-16 mb-6 mx-auto items-center justify-center text-white bg-violet-500 rounded-lg">
+            <svg
+              width={24}
+              height={21}
+              viewBox="0 0 24 21"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M17 18.63H5C4.20435 18.63 3.44129 18.3139 2.87868 17.7513C2.31607 17.1887 2 16.4257 2 15.63V7.63C2 7.36479 1.89464 7.11043 1.70711 6.9229C1.51957 6.73536 1.26522 6.63 1 6.63C0.734784 6.63 0.48043 6.73536 0.292893 6.9229C0.105357 7.11043 0 7.36479 0 7.63L0 15.63C0 16.9561 0.526784 18.2279 1.46447 19.1655C2.40215 20.1032 3.67392 20.63 5 20.63H17C17.2652 20.63 17.5196 20.5246 17.7071 20.3371C17.8946 20.1496 18 19.8952 18 19.63C18 19.3648 17.8946 19.1104 17.7071 18.9229C17.5196 18.7354 17.2652 18.63 17 18.63ZM21 0.630005H7C6.20435 0.630005 5.44129 0.946075 4.87868 1.50868C4.31607 2.07129 4 2.83436 4 3.63V13.63C4 14.4257 4.31607 15.1887 4.87868 15.7513C5.44129 16.3139 6.20435 16.63 7 16.63H21C21.7956 16.63 22.5587 16.3139 23.1213 15.7513C23.6839 15.1887 24 14.4257 24 13.63V3.63C24 2.83436 23.6839 2.07129 23.1213 1.50868C22.5587 0.946075 21.7956 0.630005 21 0.630005ZM20.59 2.63L14.71 8.51C14.617 8.60373 14.5064 8.67813 14.3846 8.7289C14.2627 8.77966 14.132 8.8058 14 8.8058C13.868 8.8058 13.7373 8.77966 13.6154 8.7289C13.4936 8.67813 13.383 8.60373 13.29 8.51L7.41 2.63H20.59ZM22 13.63C22 13.8952 21.8946 14.1496 21.7071 14.3371C21.5196 14.5246 21.2652 14.63 21 14.63H7C6.73478 14.63 6.48043 14.5246 6.29289 14.3371C6.10536 14.1496 6 13.8952 6 13.63V4L11.88 9.88C12.4425 10.4418 13.205 10.7574 14 10.7574C14.795 10.7574 15.5575 10.4418 16.12 9.88L22 4V13.63Z"
+                fill="currentColor"
+              />
+            </svg>
           </div>
-          <div className="flex flex-wrap md:flex-nowrap items-center justify-center -mx-4 mb-20 md:mb-32 2xl:mb-56">
-            <a className="w-auto px-4 order-last md:order-first" href="#">
-              <svg
-                width={8}
-                height={12}
-                viewBox="0 0 8 12"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M7.21015 10.4594C7.59662 10.8128 7.59662 11.3841 7.21015 11.7349C6.82369 12.0871 6.19929 12.0897 5.81282 11.7349L0.289847 6.63794C-0.096617 6.28579 -0.096617 5.71584 0.289847 5.36108L5.81282 0.264109C6.19785 -0.0880364 6.82369 -0.0880363 7.21015 0.264109C7.59662 0.617558 7.59662 1.18882 7.21015 1.53966L2.68073 6.00147L7.21015 10.4594Z"
-                  fill="black"
-                />
-              </svg>
-            </a>
-            <div className="w-full md:w-11/12 px-4 mb-12 md:mb-0">
-              <div className="flex flex-wrap">
-                <div className="w-full md:w-1/2 xl:w-1/3 px-4">
-                  <div className="relative max-w-sm mx-auto mb-8">
-                    <div className="relative pt-16 pb-20 px-8 md:px-16 bg-white border border-black border-opacity-10 z-10 rounded-3xl">
-                      <div className="relative inline-flex items-center justify-center mb-8 w-12 h-12 leading-6 text-white bg-blue-500 rounded-full">
-                        <span className="text-2xl font-bold">1</span>
-                      </div>
-                      <h2 className="mb-14 text-7xl lg:text-8xl leading-tight font-medium font-heading">
-                        Choose application
-                      </h2>
-                      <p className="text-lg text-darkBlueGray-400">
-                        The nulla commodo, commodo eros a, tristique lectus.
-                      </p>
-                    </div>
-                    <div className="absolute left-1/2 -bottom-3 transform -translate-x-1/2 w-11/12 h-24 border border-black border-opacity-10 rounded-3xl" />
-                  </div>
-                </div>
-                <div className="w-full md:w-1/2 xl:w-1/3 px-4">
-                  <div className="relative max-w-sm mx-auto xl:mt-10 mb-8">
-                    <div className="relative pt-16 pb-20 px-8 md:px-16 bg-white border border-black border-opacity-10 z-10 rounded-3xl">
-                      <div className="relative inline-flex items-center justify-center mb-8 w-12 h-12 leading-6 text-white bg-blue-500 rounded-full">
-                        <span className="text-2xl font-bold">2</span>
-                      </div>
-                      <h2 className="mb-14 text-7xl lg:text-8xl leading-tight font-medium font-heading">
-                        Feel free, take all
-                      </h2>
-                      <p className="text-lg text-darkBlueGray-400">
-                        Proin nec nunc felis. In non tellus ultricies, rutrum lacus
-                        et, pharetra elit.
-                      </p>
-                    </div>
-                    <div className="absolute left-1/2 -bottom-3 transform -translate-x-1/2 w-11/12 h-24 border border-black border-opacity-10 rounded-3xl" />
-                  </div>
-                </div>
-                <div className="w-full md:w-1/2 xl:w-1/3 px-4">
-                  <div className="relative max-w-sm mx-auto mb-8">
-                    <div className="relative pt-16 pb-20 px-8 md:px-16 bg-white border border-black border-opacity-10 z-10 rounded-3xl">
-                      <div className="relative inline-flex items-center justify-center mb-8 w-12 h-12 leading-6 text-white bg-blue-500 rounded-full">
-                        <span className="text-2xl font-bold">3</span>
-                      </div>
-                      <h2 className="mb-14 text-7xl lg:text-8xl leading-tight font-medium font-heading">
-                        Download app
-                      </h2>
-                      <p className="text-lg text-darkBlueGray-400">
-                        Vestibulum ante ipsum primis in faucibus orci luctus et
-                        ultrices.
-                      </p>
-                    </div>
-                    <div className="absolute left-1/2 -bottom-3 transform -translate-x-1/2 w-11/12 h-24 border border-black border-opacity-10 rounded-3xl" />
-                  </div>
-                </div>
-              </div>
+          <h3 className="mb-4 text-xl md:text-2xl leading-tight font-bold">
+            Measure your performance
+          </h3>
+          <p className="text-coolGray-500 font-medium">
+            Stay connected with your team and make quick decisions wherever you
+            are.
+          </p>
+        </div>
+      </div>
+      <div className="w-full md:w-1/2 lg:w-1/3 px-4">
+        <div className="h-full p-8 text-center hover:bg-white rounded-md hover:shadow-xl transition duration-200">
+          <div className="inline-flex h-16 w-16 mb-6 mx-auto items-center justify-center text-white bg-violet-500 rounded-lg">
+            <svg
+              width={22}
+              height={12}
+              viewBox="0 0 22 12"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M20.71 1.29C20.617 1.19627 20.5064 1.12188 20.3846 1.07111C20.2627 1.02034 20.132 0.994202 20 0.994202C19.868 0.994202 19.7373 1.02034 19.6154 1.07111C19.4936 1.12188 19.383 1.19627 19.29 1.29L13 7.59L8.71 3.29C8.61704 3.19627 8.50644 3.12188 8.38458 3.07111C8.26272 3.02034 8.13201 2.9942 8 2.9942C7.86799 2.9942 7.73728 3.02034 7.61542 3.07111C7.49356 3.12188 7.38296 3.19627 7.29 3.29L1.29 9.29C1.19627 9.38296 1.12188 9.49356 1.07111 9.61542C1.02034 9.73728 0.994202 9.86799 0.994202 10C0.994202 10.132 1.02034 10.2627 1.07111 10.3846C1.12188 10.5064 1.19627 10.617 1.29 10.71C1.38296 10.8037 1.49356 10.8781 1.61542 10.9289C1.73728 10.9797 1.86799 11.0058 2 11.0058C2.13201 11.0058 2.26272 10.9797 2.38458 10.9289C2.50644 10.8781 2.61704 10.8037 2.71 10.71L8 5.41L12.29 9.71C12.383 9.80373 12.4936 9.87812 12.6154 9.92889C12.7373 9.97966 12.868 10.0058 13 10.0058C13.132 10.0058 13.2627 9.97966 13.3846 9.92889C13.5064 9.87812 13.617 9.80373 13.71 9.71L20.71 2.71C20.8037 2.61704 20.8781 2.50644 20.9289 2.38458C20.9797 2.26272 21.0058 2.13201 21.0058 2C21.0058 1.86799 20.9797 1.73728 20.9289 1.61542C20.8781 1.49356 20.8037 1.38296 20.71 1.29Z"
+                fill="currentColor"
+              />
+            </svg>
+          </div>
+          <h3 className="mb-4 text-xl md:text-2xl leading-tight font-bold">
+            Custom analytics
+          </h3>
+          <p className="text-coolGray-500 font-medium">
+            Get a complete sales dashboard in the cloud. See activity, revenue
+            and social metrics all in one place.
+          </p>
+        </div>
+      </div>
+      <div className="w-full md:w-1/2 lg:w-1/3 px-4">
+        <div className="h-full p-8 text-center hover:bg-white rounded-md hover:shadow-xl transition duration-200">
+          <div className="inline-flex h-16 w-16 mb-6 mx-auto items-center justify-center text-white bg-violet-500 rounded-lg">
+            <svg
+              width={22}
+              height={18}
+              viewBox="0 0 22 18"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M11.3 9.22C11.8336 8.75813 12.2616 8.18688 12.5549 7.54502C12.8482 6.90316 13 6.20571 13 5.5C13 4.17392 12.4732 2.90215 11.5355 1.96447C10.5979 1.02678 9.32608 0.5 8 0.5C6.67392 0.5 5.40215 1.02678 4.46447 1.96447C3.52678 2.90215 3 4.17392 3 5.5C2.99999 6.20571 3.1518 6.90316 3.44513 7.54502C3.73845 8.18688 4.16642 8.75813 4.7 9.22C3.30014 9.85388 2.11247 10.8775 1.27898 12.1685C0.445495 13.4596 0.00147185 14.9633 0 16.5C0 16.7652 0.105357 17.0196 0.292893 17.2071C0.48043 17.3946 0.734784 17.5 1 17.5C1.26522 17.5 1.51957 17.3946 1.70711 17.2071C1.89464 17.0196 2 16.7652 2 16.5C2 14.9087 2.63214 13.3826 3.75736 12.2574C4.88258 11.1321 6.4087 10.5 8 10.5C9.5913 10.5 11.1174 11.1321 12.2426 12.2574C13.3679 13.3826 14 14.9087 14 16.5C14 16.7652 14.1054 17.0196 14.2929 17.2071C14.4804 17.3946 14.7348 17.5 15 17.5C15.2652 17.5 15.5196 17.3946 15.7071 17.2071C15.8946 17.0196 16 16.7652 16 16.5C15.9985 14.9633 15.5545 13.4596 14.721 12.1685C13.8875 10.8775 12.6999 9.85388 11.3 9.22ZM8 8.5C7.40666 8.5 6.82664 8.32405 6.33329 7.99441C5.83994 7.66476 5.45542 7.19623 5.22836 6.64805C5.0013 6.09987 4.94189 5.49667 5.05764 4.91473C5.1734 4.33279 5.45912 3.79824 5.87868 3.37868C6.29824 2.95912 6.83279 2.6734 7.41473 2.55764C7.99667 2.44189 8.59987 2.5013 9.14805 2.72836C9.69623 2.95542 10.1648 3.33994 10.4944 3.83329C10.8241 4.32664 11 4.90666 11 5.5C11 6.29565 10.6839 7.05871 10.1213 7.62132C9.55871 8.18393 8.79565 8.5 8 8.5ZM17.74 8.82C18.38 8.09933 18.798 7.20905 18.9438 6.25634C19.0896 5.30362 18.9569 4.32907 18.5618 3.45C18.1666 2.57093 17.5258 1.8248 16.7165 1.30142C15.9071 0.77805 14.9638 0.499742 14 0.5C13.7348 0.5 13.4804 0.605357 13.2929 0.792893C13.1054 0.98043 13 1.23478 13 1.5C13 1.76522 13.1054 2.01957 13.2929 2.20711C13.4804 2.39464 13.7348 2.5 14 2.5C14.7956 2.5 15.5587 2.81607 16.1213 3.37868C16.6839 3.94129 17 4.70435 17 5.5C16.9986 6.02524 16.8593 6.5409 16.5961 6.99542C16.3328 7.44994 15.9549 7.82738 15.5 8.09C15.3517 8.17552 15.2279 8.29766 15.1404 8.44474C15.0528 8.59182 15.0045 8.7589 15 8.93C14.9958 9.09976 15.0349 9.2678 15.1137 9.41826C15.1924 9.56872 15.3081 9.69665 15.45 9.79L15.84 10.05L15.97 10.12C17.1754 10.6917 18.1923 11.596 18.901 12.7263C19.6096 13.8566 19.9805 15.1659 19.97 16.5C19.97 16.7652 20.0754 17.0196 20.2629 17.2071C20.4504 17.3946 20.7048 17.5 20.97 17.5C21.2352 17.5 21.4896 17.3946 21.6771 17.2071C21.8646 17.0196 21.97 16.7652 21.97 16.5C21.9782 14.9654 21.5938 13.4543 20.8535 12.1101C20.1131 10.7659 19.0413 9.63331 17.74 8.82Z"
+                fill="currentColor"
+              />
+            </svg>
+          </div>
+          <h3 className="mb-4 text-xl md:text-2xl leading-tight font-bold">
+            Team Management
+          </h3>
+          <p className="text-coolGray-500 font-medium">
+            Our calendar lets you know what is happening with customer and
+            projects so you
+          </p>
+        </div>
+      </div>
+      <div className="w-full md:w-1/2 lg:w-1/3 px-4">
+        <div className="h-full p-8 text-center hover:bg-white rounded-md hover:shadow-xl transition duration-200">
+          <div className="inline-flex h-16 w-16 mb-6 mx-auto items-center justify-center text-white bg-violet-500 rounded-lg">
+            <svg
+              width={24}
+              height={24}
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M5 18H9.24C9.37161 18.0008 9.50207 17.9755 9.62391 17.9258C9.74574 17.876 9.85656 17.8027 9.95 17.71L16.87 10.78L19.71 8C19.8037 7.90704 19.8781 7.79644 19.9289 7.67458C19.9797 7.55272 20.0058 7.42201 20.0058 7.29C20.0058 7.15799 19.9797 7.02728 19.9289 6.90542C19.8781 6.78356 19.8037 6.67296 19.71 6.58L15.47 2.29C15.377 2.19627 15.2664 2.12188 15.1446 2.07111C15.0227 2.02034 14.892 1.9942 14.76 1.9942C14.628 1.9942 14.4973 2.02034 14.3754 2.07111C14.2536 2.12188 14.143 2.19627 14.05 2.29L11.23 5.12L4.29 12.05C4.19732 12.1434 4.12399 12.2543 4.07423 12.3761C4.02446 12.4979 3.99924 12.6284 4 12.76V17C4 17.2652 4.10536 17.5196 4.29289 17.7071C4.48043 17.8946 4.73478 18 5 18ZM14.76 4.41L17.59 7.24L16.17 8.66L13.34 5.83L14.76 4.41ZM6 13.17L11.93 7.24L14.76 10.07L8.83 16H6V13.17ZM21 20H3C2.73478 20 2.48043 20.1054 2.29289 20.2929C2.10536 20.4804 2 20.7348 2 21C2 21.2652 2.10536 21.5196 2.29289 21.7071C2.48043 21.8946 2.73478 22 3 22H21C21.2652 22 21.5196 21.8946 21.7071 21.7071C21.8946 21.5196 22 21.2652 22 21C22 20.7348 21.8946 20.4804 21.7071 20.2929C21.5196 20.1054 21.2652 20 21 20Z"
+                fill="currentColor"
+              />
+            </svg>
+          </div>
+          <h3 className="mb-4 text-xl md:text-2xl leading-tight font-bold">
+            Build your website
+          </h3>
+          <p className="text-coolGray-500 font-medium">
+            A tool that lets you build a dream website even if you know nothing
+            about web design or programming.
+          </p>
+        </div>
+      </div>
+      <div className="w-full md:w-1/2 lg:w-1/3 px-4">
+        <div className="h-full p-8 text-center hover:bg-white rounded-md hover:shadow-xl transition duration-200">
+          <div className="inline-flex h-16 w-16 mb-6 mx-auto items-center justify-center text-white bg-violet-500 rounded-lg">
+            <svg
+              width={20}
+              height={20}
+              viewBox="0 0 20 20"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M8 11H1C0.734784 11 0.48043 11.1054 0.292893 11.2929C0.105357 11.4804 0 11.7348 0 12V19C0 19.2652 0.105357 19.5196 0.292893 19.7071C0.48043 19.8946 0.734784 20 1 20H8C8.26522 20 8.51957 19.8946 8.70711 19.7071C8.89464 19.5196 9 19.2652 9 19V12C9 11.7348 8.89464 11.4804 8.70711 11.2929C8.51957 11.1054 8.26522 11 8 11ZM7 18H2V13H7V18ZM19 0H12C11.7348 0 11.4804 0.105357 11.2929 0.292893C11.1054 0.48043 11 0.734784 11 1V8C11 8.26522 11.1054 8.51957 11.2929 8.70711C11.4804 8.89464 11.7348 9 12 9H19C19.2652 9 19.5196 8.89464 19.7071 8.70711C19.8946 8.51957 20 8.26522 20 8V1C20 0.734784 19.8946 0.48043 19.7071 0.292893C19.5196 0.105357 19.2652 0 19 0ZM18 7H13V2H18V7ZM19 11H12C11.7348 11 11.4804 11.1054 11.2929 11.2929C11.1054 11.4804 11 11.7348 11 12V19C11 19.2652 11.1054 19.5196 11.2929 19.7071C11.4804 19.8946 11.7348 20 12 20H19C19.2652 20 19.5196 19.8946 19.7071 19.7071C19.8946 19.5196 20 19.2652 20 19V12C20 11.7348 19.8946 11.4804 19.7071 11.2929C19.5196 11.1054 19.2652 11 19 11ZM18 18H13V13H18V18ZM8 0H1C0.734784 0 0.48043 0.105357 0.292893 0.292893C0.105357 0.48043 0 0.734784 0 1V8C0 8.26522 0.105357 8.51957 0.292893 8.70711C0.48043 8.89464 0.734784 9 1 9H8C8.26522 9 8.51957 8.89464 8.70711 8.70711C8.89464 8.51957 9 8.26522 9 8V1C9 0.734784 8.89464 0.48043 8.70711 0.292893C8.51957 0.105357 8.26522 0 8 0ZM7 7H2V2H7V7Z"
+                fill="currentColor"
+              />
+            </svg>
+          </div>
+          <h3 className="mb-4 text-xl md:text-2xl leading-tight font-bold">
+            Connect multiple apps
+          </h3>
+          <p className="text-coolGray-500 font-medium">
+            The first business platform to bring together all of your products
+            from one place.
+          </p>
+        </div>
+      </div>
+      <div className="w-full md:w-1/2 lg:w-1/3 px-4">
+        <div className="h-full p-8 text-center hover:bg-white rounded-md hover:shadow-xl transition duration-200">
+          <div className="inline-flex h-16 w-16 mb-6 mx-auto items-center justify-center text-white bg-violet-500 rounded-lg">
+            <svg
+              width={20}
+              height={20}
+              viewBox="0 0 20 20"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M19.32 7.55L17.43 6.92L18.32 5.14C18.4102 4.95369 18.4404 4.74397 18.4064 4.53978C18.3723 4.33558 18.2758 4.14699 18.13 4L16 1.87C15.8522 1.72209 15.6618 1.62421 15.4555 1.59013C15.2493 1.55605 15.0375 1.58748 14.85 1.68L13.07 2.57L12.44 0.680003C12.3735 0.482996 12.2472 0.311629 12.0787 0.189751C11.9102 0.0678737 11.7079 0.00154767 11.5 3.33354e-06H8.5C8.29036 -0.000537828 8.08585 0.0648223 7.91537 0.186845C7.7449 0.308868 7.61709 0.481382 7.55 0.680003L6.92 2.57L5.14 1.68C4.95369 1.58978 4.74397 1.55961 4.53978 1.59364C4.33558 1.62767 4.14699 1.72423 4 1.87L1.87 4C1.72209 4.14777 1.62421 4.33818 1.59013 4.54446C1.55605 4.75074 1.58748 4.96251 1.68 5.15L2.57 6.93L0.680003 7.56C0.482996 7.62654 0.311629 7.75283 0.189751 7.92131C0.0678737 8.08979 0.00154767 8.29207 3.33354e-06 8.5V11.5C-0.000537828 11.7096 0.0648223 11.9142 0.186845 12.0846C0.308868 12.2551 0.481382 12.3829 0.680003 12.45L2.57 13.08L1.68 14.86C1.58978 15.0463 1.55961 15.256 1.59364 15.4602C1.62767 15.6644 1.72423 15.853 1.87 16L4 18.13C4.14777 18.2779 4.33818 18.3758 4.54446 18.4099C4.75074 18.444 4.96251 18.4125 5.15 18.32L6.93 17.43L7.56 19.32C7.62709 19.5186 7.7549 19.6911 7.92537 19.8132C8.09585 19.9352 8.30036 20.0005 8.51 20H11.51C11.7196 20.0005 11.9242 19.9352 12.0946 19.8132C12.2651 19.6911 12.3929 19.5186 12.46 19.32L13.09 17.43L14.87 18.32C15.0551 18.4079 15.2628 18.4369 15.4649 18.4029C15.667 18.3689 15.8538 18.2737 16 18.13L18.13 16C18.2779 15.8522 18.3758 15.6618 18.4099 15.4555C18.444 15.2493 18.4125 15.0375 18.32 14.85L17.43 13.07L19.32 12.44C19.517 12.3735 19.6884 12.2472 19.8103 12.0787C19.9321 11.9102 19.9985 11.7079 20 11.5V8.5C20.0005 8.29036 19.9352 8.08585 19.8132 7.91537C19.6911 7.7449 19.5186 7.61709 19.32 7.55ZM18 10.78L16.8 11.18C16.5241 11.2695 16.2709 11.418 16.0581 11.6151C15.8452 11.8122 15.6778 12.0533 15.5675 12.3216C15.4571 12.5899 15.4064 12.879 15.419 13.1688C15.4315 13.4586 15.5069 13.7422 15.64 14L16.21 15.14L15.11 16.24L14 15.64C13.7436 15.5122 13.4627 15.4411 13.1763 15.4313C12.89 15.4215 12.6049 15.4734 12.3403 15.5834C12.0758 15.6934 11.8379 15.8589 11.6429 16.0688C11.4479 16.2787 11.3003 16.5281 11.21 16.8L10.81 18H9.22L8.82 16.8C8.73049 16.5241 8.58203 16.2709 8.3849 16.0581C8.18778 15.8452 7.94671 15.6778 7.67842 15.5675C7.41014 15.4571 7.12105 15.4064 6.83123 15.419C6.5414 15.4315 6.25777 15.5069 6 15.64L4.86 16.21L3.76 15.11L4.36 14C4.4931 13.7422 4.56852 13.4586 4.58105 13.1688C4.59358 12.879 4.5429 12.5899 4.43254 12.3216C4.32218 12.0533 4.15478 11.8122 3.94195 11.6151C3.72912 11.418 3.47595 11.2695 3.2 11.18L2 10.78V9.22L3.2 8.82C3.47595 8.73049 3.72912 8.58203 3.94195 8.3849C4.15478 8.18778 4.32218 7.94671 4.43254 7.67842C4.5429 7.41014 4.59358 7.12105 4.58105 6.83123C4.56852 6.5414 4.4931 6.25777 4.36 6L3.79 4.89L4.89 3.79L6 4.36C6.25777 4.4931 6.5414 4.56852 6.83123 4.58105C7.12105 4.59358 7.41014 4.5429 7.67842 4.43254C7.94671 4.32218 8.18778 4.15478 8.3849 3.94195C8.58203 3.72912 8.73049 3.47595 8.82 3.2L9.22 2H10.78L11.18 3.2C11.2695 3.47595 11.418 3.72912 11.6151 3.94195C11.8122 4.15478 12.0533 4.32218 12.3216 4.43254C12.5899 4.5429 12.879 4.59358 13.1688 4.58105C13.4586 4.56852 13.7422 4.4931 14 4.36L15.14 3.79L16.24 4.89L15.64 6C15.5122 6.25645 15.4411 6.53735 15.4313 6.82369C15.4215 7.11003 15.4734 7.39513 15.5834 7.65969C15.6934 7.92424 15.8589 8.16207 16.0688 8.35708C16.2787 8.5521 16.5281 8.69973 16.8 8.79L18 9.19V10.78ZM10 6C9.20888 6 8.43552 6.2346 7.77772 6.67413C7.11993 7.11365 6.60724 7.73836 6.30448 8.46927C6.00173 9.20017 5.92252 10.0044 6.07686 10.7804C6.2312 11.5563 6.61217 12.269 7.17158 12.8284C7.73099 13.3878 8.44372 13.7688 9.21964 13.9231C9.99557 14.0775 10.7998 13.9983 11.5307 13.6955C12.2616 13.3928 12.8864 12.8801 13.3259 12.2223C13.7654 11.5645 14 10.7911 14 10C14 8.93914 13.5786 7.92172 12.8284 7.17158C12.0783 6.42143 11.0609 6 10 6ZM10 12C9.60444 12 9.21776 11.8827 8.88886 11.6629C8.55996 11.4432 8.30362 11.1308 8.15224 10.7654C8.00087 10.3999 7.96126 9.99778 8.03843 9.60982C8.1156 9.22186 8.30608 8.86549 8.58579 8.58579C8.86549 8.30608 9.22186 8.1156 9.60982 8.03843C9.99778 7.96126 10.3999 8.00087 10.7654 8.15224C11.1308 8.30362 11.4432 8.55996 11.6629 8.88886C11.8827 9.21776 12 9.60444 12 10C12 10.5304 11.7893 11.0391 11.4142 11.4142C11.0391 11.7893 10.5304 12 10 12Z"
+                fill="currentColor"
+              />
+            </svg>
+          </div>
+          <h3 className="mb-4 text-xl md:text-2xl leading-tight font-bold">
+            Easy setup
+          </h3>
+          <p className="text-coolGray-500 font-medium">
+            End to End Business Platform, Sales Management, Marketing
+            Automation, Help Desk
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section
+  className="py-24 bg-white overflow-hidden"
+  style={{
+    backgroundImage: 'url("flex-ui-assets/elements/pattern-white.svg")',
+    backgroundPosition: "center"
+  }}
+>
+  <div className="container px-4 mx-auto">
+    <div className="flex flex-wrap -mx-4">
+      <div className="w-full md:w-1/2 px-4 mb-16 md:mb-0">
+        <div className="relative mx-auto md:ml-0 max-w-max">
+          <img
+            className="absolute z-10 -right-8 -top-8 w-28 md:w-auto"
+            src="flex-ui-assets/elements/circle3-green.svg"
+            alt=""
+          />
+          <img
+            className="absolute z-10 -left-10 -bottom-8 w-28 md:w-auto"
+            src="flex-ui-assets/elements/dots3-yellow.svg"
+            alt=""
+          />
+          <img src="flex-ui-assets/images/how-it-works/stock.png" alt="" />
+        </div>
+      </div>
+      <div className="w-full md:w-1/2 px-4">
+        <span className="inline-block py-px px-2 mb-4 text-xs leading-5 text-violet-500 bg-violet-100 font-medium uppercase rounded-full shadow-sm">
+          How it works
+        </span>
+        <h2 className="mb-12 text-4xl md:text-5xl leading-tight font-bold tracking-tighter">
+          Gain more insight into how people use your
+        </h2>
+        <div className="flex flex-wrap -mx-4 text-center md:text-left">
+          <div className="w-full md:w-1/2 px-4 mb-8">
+            <div className="inline-flex items-center justify-center mb-4 w-12 h-12 text-xl text-white bg-violet-500 font-semibold rounded-full">
+              1
             </div>
-            <a className="w-auto px-4 order-last" href="#">
-              <svg
-                width={8}
-                height={12}
-                viewBox="0 0 8 12"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M0.289848 1.54064C-0.0966159 1.18719 -0.0966159 0.615929 0.289848 0.265087C0.676312 -0.0870581 1.30071 -0.0896664 1.68718 0.265087L7.21015 5.36206C7.59662 5.71421 7.59662 6.28416 7.21015 6.63892L1.68718 11.7359C1.30215 12.088 0.676312 12.088 0.289848 11.7359C-0.096616 11.3824 -0.096616 10.8112 0.289848 10.4603L4.81927 5.99853L0.289848 1.54064Z"
-                  fill="black"
-                />
-              </svg>
-            </a>
+            <h3 className="mb-2 text-xl font-bold">Custom analytics</h3>
+            <p className="font-medium text-coolGray-500">
+              Get a complete sales dashboard in the cloud. See activity, revenue
+              and social metrics all in one place.
+            </p>
           </div>
-          <div className="flex w-44 h-1 mx-auto bg-blue-200">
-            <a className="w-1/2 bg-indigo-500" href="#" />
-            <a className="w-1/2 bg-transparent" href="#" />
+          <div className="w-full md:w-1/2 px-4 mb-8">
+            <div className="inline-flex items-center justify-center mb-4 w-12 h-12 text-xl text-white bg-violet-500 font-semibold rounded-full">
+              2
+            </div>
+            <h3 className="mb-2 text-xl font-bold">Team Management</h3>
+            <p className="font-medium text-coolGray-500">
+              Our calendar lets you know what is happening with customer and
+              projects so you are able to control process.
+            </p>
+          </div>
+          <div className="w-full md:w-1/2 px-4 mb-8">
+            <div className="inline-flex items-center justify-center mb-4 w-12 h-12 text-xl text-white bg-violet-500 font-semibold rounded-full">
+              3
+            </div>
+            <h3 className="mb-2 text-xl font-bold">Easy setup</h3>
+            <p className="font-medium text-coolGray-500">
+              End to End Business Platform, Sales Management, Marketing
+              Automation, Help Desk and many more
+            </p>
+          </div>
+          <div className="w-full md:w-1/2 px-4">
+            <div className="inline-flex items-center justify-center mb-4 w-12 h-12 text-xl text-white bg-violet-500 font-semibold rounded-full">
+              4
+            </div>
+            <h3 className="mb-2 text-xl font-bold">Build your website</h3>
+            <p className="font-medium text-coolGray-500">
+              A tool that lets you build a dream website even if you know
+              nothing about web design or programming.
+            </p>
           </div>
         </div>
-      </section>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section
+  className="py-20 xl:pt-24 xl:pb-28 bg-white"
+  style={{
+    backgroundImage: 'url("flex-ui-assets/elements/pattern-white.svg")',
+    backgroundPosition: "center"
+  }}
+>
+  <div className="container px-4 mx-auto">
+    <span className="inline-block py-px px-2 mb-4 text-xs leading-5 text-violet-500 bg-violet-100 font-medium uppercase rounded-9xl">
+      Pricing
+    </span>
+    <h3 className="mb-4 text-3xl md:text-5xl text-coolGray-900 font-bold tracking-tighter">
+      Flexible pricing plan for your startup
+    </h3>
+    <p className="mb-12 text-lg md:text-xl text-coolGray-500 font-medium">
+      Pricing that scales with your business immediately.
+    </p>
+    <div className="flex flex-wrap justify-center -mx-4">
+      <div className="w-full md:w-1/2 lg:w-1/3 p-4">
+        <div className="flex flex-col items-center pt-10 px-8 pb-8 bg-coolGray-50 rounded-md shadow-md hover:scale-105 transition duration-500">
+          <span className="inline-block py-px px-2 mb-6 text-xs leading-5 text-violet-500 bg-violet-100 font-medium uppercase rounded-9xl">
+            Pricing
+          </span>
+          <h3 className="mb-4 text-lg md:text-xl text-violet-500 font-medium">
+            Basic Plan
+          </h3>
+          <div className="mb-4">
+            <span className="relative -top-6 right-1 text-2xl text-coolGray-900 font-medium">
+              $
+            </span>
+            <span className="text-5xl text-coolGray-900 font-medium">10</span>
+            <span className="text-3xl text-coolGray-900 font-medium">/mo</span>
+          </div>
+          <p className="mb-7 text-lg md:text-xl text-coolGray-400 font-medium">
+            Billed annually
+          </p>
+          <ul className="self-start mb-8">
+            <li className="flex items-center mb-3 text-coolGray-500 font-medium">
+              <img
+                className="mr-3"
+                src="flex-ui-assets/elements/pricing/checkbox-violet.svg"
+              />
+              <span>Complete documentation</span>
+            </li>
+            <li className="flex items-center mb-3 text-coolGray-500 font-medium">
+              <img
+                className="mr-3"
+                src="flex-ui-assets/elements/pricing/checkbox-violet.svg"
+              />
+              <span>Working materials in Figma</span>
+            </li>
+            <li className="flex items-center mb-3 text-coolGray-500 font-medium">
+              <img
+                className="mr-3"
+                src="flex-ui-assets/elements/pricing/checkbox-violet.svg"
+              />
+              <span>100GB cloud storage</span>
+            </li>
+            <li className="flex items-center text-coolGray-500 font-medium">
+              <img
+                className="mr-3"
+                src="flex-ui-assets/elements/pricing/checkbox-violet.svg"
+              />
+              <span>500 team members</span>
+            </li>
+          </ul>
+          <a
+            className="inline-block py-3 px-7 w-full text-violet-50 font-medium text-center bg-violet-500 hover:bg-violet-600 focus:ring-2 focus:ring-violet-500 focus:ring-opacity-50 rounded-md shadow-sm"
+            href="#"
+          >
+            Request a Demo
+          </a>
+        </div>
+      </div>
+      <div className="w-full md:w-1/2 lg:w-1/3 p-4">
+        <div className="flex flex-col items-center pt-10 px-8 pb-8 bg-coolGray-50 rounded-md shadow-md hover:scale-105 transition duration-500">
+          <span className="inline-block py-px px-2 mb-6 text-xs leading-5 text-violet-500 bg-violet-100 font-medium uppercase rounded-9xl">
+            Pricing
+          </span>
+          <h3 className="mb-4 text-lg md:text-xl text-violet-500 font-medium">
+            Freelancer Plan
+          </h3>
+          <div className="mb-4">
+            <span className="relative -top-6 right-1 text-2xl text-coolGray-900 font-medium">
+              $
+            </span>
+            <span className="text-5xl text-coolGray-900 font-medium">99</span>
+            <span className="text-3xl text-coolGray-900 font-medium">/mo</span>
+          </div>
+          <p className="mb-7 text-lg md:text-xl text-coolGray-400 font-medium">
+            Billed annually
+          </p>
+          <ul className="self-start mb-8">
+            <li className="flex items-center mb-3 text-coolGray-500 font-medium">
+              <img
+                className="mr-3"
+                src="flex-ui-assets/elements/pricing/checkbox-violet.svg"
+              />
+              <span>Complete documentation</span>
+            </li>
+            <li className="flex items-center mb-3 text-coolGray-500 font-medium">
+              <img
+                className="mr-3"
+                src="flex-ui-assets/elements/pricing/checkbox-violet.svg"
+              />
+              <span>Working materials in Figma</span>
+            </li>
+            <li className="flex items-center mb-3 text-coolGray-500 font-medium">
+              <img
+                className="mr-3"
+                src="flex-ui-assets/elements/pricing/checkbox-violet.svg"
+              />
+              <span>100GB cloud storage</span>
+            </li>
+            <li className="flex items-center text-coolGray-500 font-medium">
+              <img
+                className="mr-3"
+                src="flex-ui-assets/elements/pricing/checkbox-violet.svg"
+              />
+              <span>500 team members</span>
+            </li>
+          </ul>
+          <a
+            className="inline-block py-3 px-7 w-full text-violet-50 font-medium text-center bg-violet-500 hover:bg-violet-600 focus:ring-2 focus:ring-violet-500 focus:ring-opacity-50 rounded-md shadow-sm"
+            href="#"
+          >
+            Request a Demo
+          </a>
+        </div>
+      </div>
+      <div className="w-full md:w-1/2 lg:w-1/3 p-4">
+        <div className="flex flex-col items-center pt-10 px-8 pb-8 bg-coolGray-50 rounded-md shadow-md hover:scale-105 transition duration-500">
+          <span className="inline-block py-px px-2 mb-6 text-xs leading-5 text-violet-500 bg-violet-100 font-medium uppercase rounded-9xl">
+            Pricing
+          </span>
+          <h3 className="mb-4 text-lg md:text-xl text-violet-500 font-medium">
+            Enterprise Plan
+          </h3>
+          <div className="mb-4">
+            <span className="relative -top-6 right-1 text-2xl text-coolGray-900 font-medium">
+              $
+            </span>
+            <span className="text-5xl text-coolGray-900 font-medium">799</span>
+            <span className="text-3xl text-coolGray-900 font-medium">
+              /year
+            </span>
+          </div>
+          <p className="mb-7 text-lg md:text-xl text-coolGray-400 font-medium">
+            Billed annually
+          </p>
+          <ul className="self-start mb-8">
+            <li className="flex items-center mb-3 text-coolGray-500 font-medium">
+              <img
+                className="mr-3"
+                src="flex-ui-assets/elements/pricing/checkbox-violet.svg"
+              />
+              <span>Complete documentation</span>
+            </li>
+            <li className="flex items-center mb-3 text-coolGray-500 font-medium">
+              <img
+                className="mr-3"
+                src="flex-ui-assets/elements/pricing/checkbox-violet.svg"
+              />
+              <span>Working materials in Figma</span>
+            </li>
+            <li className="flex items-center mb-3 text-coolGray-500 font-medium">
+              <img
+                className="mr-3"
+                src="flex-ui-assets/elements/pricing/checkbox-violet.svg"
+              />
+              <span>100GB cloud storage</span>
+            </li>
+            <li className="flex items-center text-coolGray-500 font-medium">
+              <img
+                className="mr-3"
+                src="flex-ui-assets/elements/pricing/checkbox-violet.svg"
+              />
+              <span>500 team members</span>
+            </li>
+          </ul>
+          <a
+            className="inline-block py-3 px-7 w-full text-violet-50 font-medium text-center bg-violet-500 hover:bg-violet-600 focus:ring-2 focus:ring-violet-500 focus:ring-opacity-50 rounded-md shadow-sm"
+            href="#"
+          >
+            Request a Demo
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 
 
