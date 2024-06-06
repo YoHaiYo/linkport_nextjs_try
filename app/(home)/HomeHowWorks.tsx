@@ -7,7 +7,7 @@ export const HomeHowWorks = () => {
     <section
       className="py-24 bg-white overflow-hidden"
       style={{
-        backgroundImage: 'url("flex-ui-assets/elements/pattern-white.svg")',
+        backgroundImage: 'url("/svg/pattern-white.svg")',
         backgroundPosition: "center",
       }}
     >

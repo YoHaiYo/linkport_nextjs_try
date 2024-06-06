@@ -7,7 +7,7 @@ export const HomeFeatures = () => {
     <section
       className="py-24 md:pb-32 bg-white"
       style={{
-        backgroundImage: 'url("flex-ui-assets/elements/pattern-white.svg")',
+        backgroundImage: 'url("/svg/pattern-white.svg")',
         backgroundPosition: "center",
       }}
     >

@@ -7,7 +7,7 @@ export const HomePricing = () => {
     <section
       className="py-20 xl:pt-24 xl:pb-28 bg-white"
       style={{
-        backgroundImage: 'url("flex-ui-assets/elements/pattern-white.svg")',
+        backgroundImage: 'url("/svg/pattern-white.svg")',
         backgroundPosition: "center",
       }}
     >

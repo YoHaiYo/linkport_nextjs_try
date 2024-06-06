@@ -7,7 +7,7 @@ export const HomeHeader = () => {
     <section
       className="relative bg-white overflow-hidden"
       style={{
-        backgroundImage: 'url("flex-ui-assets/elements/pattern-white.svg")',
+        backgroundImage: 'url("/svg/pattern-white.svg")',
         backgroundPosition: "center",
       }}
     >
