@@ -20,21 +20,46 @@ export default async function AuthButton() {
 
   return user ? (
     <div className="flex items-center gap-4">
-      Hey, {user.email}!
-      <Link className="py-2 px-4 rounded-md no-underline bg-blue-300" href={"/dashboard"}>Dashboard</Link>
+      {/* <a
+          className="inline-block py-2 px-4 mr-2 leading-5 text-coolGray-500 hover:text-coolGray-900 bg-transparent font-medium rounded-md"
+          href="#"
+        >
+          Log In
+        </a>
+        <a
+          className="inline-block py-2 px-4 text-sm leading-5 text-violet-50 bg-violet-500 hover:bg-violet-600 font-medium focus:ring-2 focus:ring-violet-500 focus:ring-opacity-50 rounded-md"
+          href="#"
+        >
+          Sign Up
+        </a> */}
+      Hello, {user.email}!
+      <Link
+        className="py-2 px-4 rounded-md no-underline text-violet-50 bg-violet-500 hover:bg-violet-600 font-medium focus:ring-2 focus:ring-violet-500 focus:ring-opacity-50 rounded-md"
+        href={"/dashboard"}
+      >
+        Dashboard
+      </Link>
       {/* Hey, {user.role}! */}
       <form action={signOut}>
-        <button className="py-2 px-4 rounded-md no-underline bg-btn-background hover:bg-btn-background-hover">
+        <button className="inline-block py-2 px-4 mr-2 leading-5 text-coolGray-500 hover:text-coolGray-900 bg-transparent font-medium rounded-md">
           Logout
         </button>
       </form>
     </div>
   ) : (
-    <Link
-      href="/login"
-      className="py-2 px-3 flex rounded-md no-underline bg-btn-background hover:bg-btn-background-hover"
-    >
-      Login
-    </Link>
+    <div className="flex items-center gap-4">
+      <Link
+        href="/login"
+        className="inline-block py-2 px-4 mr-2 leading-5 text-coolGray-500 hover:text-coolGray-900 bg-transparent font-medium rounded-md"
+      >
+        Login
+      </Link>
+      <Link
+        href="/login"
+        className="inline-block py-2 px-4 text-sm leading-5 text-violet-50 bg-violet-500 hover:bg-violet-600 font-medium focus:ring-2 focus:ring-violet-500 focus:ring-opacity-50 rounded-md"
+      >
+        Sign Up
+      </Link>
+    </div>
   );
 }

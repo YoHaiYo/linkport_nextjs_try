@@ -20,6 +20,21 @@ NEXT_PUBLIC_SUPABASE_ANON_KEY=
 
 - nextjs에서 폰트어썸아이콘 사용 : https://s-young01.tistory.com/71
 
+- 테일윈드 센터 레이아웃 템플릿
+
+```
+<section className="py-24 bg-white overflow-hidden">
+      <div className="container px-4 mx-auto">
+        <div className="flex justify-center flex-wrap -mx-4">
+          <div className="w-full md:w-1/2 px-4">
+            {/* contents */}
+            {/* /contents */}
+          </div>
+        </div>
+      </div>
+    </section>
+```
+
 - DB테이블은 'linkport' 사용중 (24.06.04)
 - @ 는 app폴더 밖 경로를 의미함
 - 클라이언트사이드 랜더링시 다음 이용 : import { createClient } from '@/utils/supabase/client'
