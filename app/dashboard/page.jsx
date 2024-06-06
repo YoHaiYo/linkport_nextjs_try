@@ -22,12 +22,12 @@ export default async function DashboardPage() {
 
   return (
     <div className="flex-1 w-full flex flex-col gap-20 items-center">
-      <div className="w-full">
+      {/* <div className="w-full">
         <div className="py-6 font-bold bg-green-300 text-center">
           This is a DashboardPage that you can only see as an authenticated
           user
         </div>
-      </div>
+      </div> */}
       <Notes userid={user.id} useremail={user.email} />
 
     </div>

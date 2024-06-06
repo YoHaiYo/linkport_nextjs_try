@@ -2,12 +2,14 @@
 
 import AuthButton from "@/components/AuthButton";
 import HomeButton from "@/components/HomeButton";
+import { ExampleComponent2 } from "@/components/templet/ExampleComponent2";
 import { createClient } from "@/utils/supabase/server";
 
 import { colors } from "@/utils/supabase/theme/colors";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Link from "next/link";
+import { useState } from "react";
 // import { useState } from "react";
 
 const canInitSupabaseClient = () => {
@@ -37,10 +39,8 @@ export const HomeNavbar = () => {
             <Link className="block max-w-max" href="/">
               <img className="h-8" src="/svg/flex-ui-violet-light.svg" alt="" />
             </Link>
-            {/* <a className="block max-w-max" href="/">
-              <img className="h-8" src="/svg/flex-ui-violet-light.svg" alt="" />
-            </a> */}
           </div>
+          {/* <ExampleComponent2 /> */}
           <div className="hidden xl:block xl:w-1/3">
             <ul className="flex justify-center">
               <li className="mr-12">
@@ -86,6 +86,7 @@ export const HomeNavbar = () => {
           </div>
         </div>
         <button
+          id="hamburger"
           className="navbar-burger self-center xl:hidden"
         // onClick={() => { setMenuVisible(!menuVisible) }}
         >

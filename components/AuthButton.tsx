@@ -1,4 +1,5 @@
 import { createClient } from "@/utils/supabase/server";
+import { colors } from "@/utils/supabase/theme/colors";
 import Link from "next/link";
 import { redirect } from "next/navigation";
 
@@ -20,26 +21,13 @@ export default async function AuthButton() {
 
   return user ? (
     <div className="flex items-center gap-4">
-      {/* <a
-          className="inline-block py-2 px-4 mr-2 leading-5 text-coolGray-500 hover:text-coolGray-900 bg-transparent font-medium rounded-md"
-          href="#"
-        >
-          Log In
-        </a>
-        <a
-          className="inline-block py-2 px-4 text-sm leading-5 text-violet-50 bg-violet-500 hover:bg-violet-600 font-medium focus:ring-2 focus:ring-violet-500 focus:ring-opacity-50 rounded-md"
-          href="#"
-        >
-          Sign Up
-        </a> */}
-      Hello, {user.email}!
+      Hello, {user.email} !
       <Link
         className="py-2 px-4 rounded-md no-underline text-violet-50 bg-violet-500 hover:bg-violet-600 font-medium focus:ring-2 focus:ring-violet-500 focus:ring-opacity-50 rounded-md"
         href={"/dashboard"}
       >
         Dashboard
       </Link>
-      {/* Hey, {user.role}! */}
       <form action={signOut}>
         <button className="inline-block py-2 px-4 mr-2 leading-5 text-coolGray-500 hover:text-coolGray-900 bg-transparent font-medium rounded-md">
           Logout

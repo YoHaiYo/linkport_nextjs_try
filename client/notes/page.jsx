@@ -155,7 +155,7 @@ export default function Notes({ userid, useremail }) {
 
   return (
     <div id='note'>
-      <h1 className='font-bold mb-2'>My Notes</h1>
+      <h1 className='font-bold mb-2'>{useremail}'s Notes</h1>
       <div className='flex mb-5'>
         <input
           id="add-title"

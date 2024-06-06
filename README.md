@@ -58,6 +58,11 @@ NEXT_PUBLIC_SUPABASE_ANON_KEY=
 - 로그인 해야만 dashboard 페이지 나오게 구현. server 사이드로 위의 로그인성공시 활성코드 쓰고 import로 보드 페이지 불러오면됨..!
 - /notes 페이지는 url로 들어가면 안되니까 (notes)로 폴더명변경.
 
+### 서버 컴포넌트 vs 클라이언트 컴포넌트
+- 서버 컴포넌트, 클라이언트 컴포넌트 섞는 패턴 공식 문서 :  https://nextjs.org/docs/app/building-your-application/rendering/composition-patterns
+- 지원 안되는 배턴 : 클라이언트 컴포넌트에 서버 컴포넌트 임포트. 반대로 서버 컴포넌트에서 클라이언트 컴포넌트에 임포트 또한 안됨.
+- 지원 되는 배턴(★) : 서버컴포넌트에서 props로 클라이언트 컴포넌트에 전달해서 섞는 방법은 가능함..!
+
 ### 발생한 이슈
 - HomeNavBar에서 로그인 메뉴는 SSR인데 햄버거버튼은 CSR로 해야됨. 어떻게 분리할지고민 or 전역상태관리로 해결할 수 있을지 고민하기(Redux)
 
