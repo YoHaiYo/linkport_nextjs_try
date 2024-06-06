@@ -1,4 +1,4 @@
-import { colors } from "@/utils/supabase/theme/colors";
+import { colors } from "@/utils/theme/colors";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 

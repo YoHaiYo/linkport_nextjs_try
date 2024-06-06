@@ -71,6 +71,7 @@ NEXT_PUBLIC_SUPABASE_ANON_KEY=
 
 - 회원가입 이메일 인증 후에 protect페이지로 이동하는 이슈 해결하기 
 -> /app/auth/callback 에서 redirect 수정하였음. 해결됬는지는 확인필요!
+-> login 페이지로 넘어가게 해결됬음. but 배포버전에서도 local:3000으로 넘어가는 문제는 더 해결필요.
 
 ### 해결한 이슈
 - 로그인하는 유저별로 다르게 dashboard 보여줄려면 DB table 어떻게 짤지 고민하기 -> userid 일치여부로 구현함!
