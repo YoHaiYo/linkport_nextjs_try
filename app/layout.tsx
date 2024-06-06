@@ -1,5 +1,6 @@
 import { GeistSans } from "geist/font/sans";
 import "./globals_tailwind.css";
+import "./globals_my.css";
 // import "./globals_bootstrap.css";
 import HomeButton from "@/components/HomeButton";
 import Link from "next/link";

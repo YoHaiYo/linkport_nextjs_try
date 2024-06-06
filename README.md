@@ -50,7 +50,7 @@ NEXT_PUBLIC_SUPABASE_ANON_KEY=
   } = await supabase.auth.getUser();
 
   if (!user) {
-    return redirect("/login");
+    return redirect("/login");s
   }
 ```
 

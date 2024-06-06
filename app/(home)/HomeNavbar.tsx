@@ -20,6 +20,8 @@ const canInitSupabaseClient = () => {
 
 const isSupabaseConnected = canInitSupabaseClient();
 
+console.log("isSupabaseConnected : ", isSupabaseConnected)
+
 export const HomeNavbar = () => {
   return (
     <section className="bg-white">
@@ -85,6 +87,9 @@ export const HomeNavbar = () => {
                 Sign Up
               </a> */}
               {isSupabaseConnected && <AuthButton />}
+
+              {/* test용 */}
+              <AuthButton />
             </div>
           </div>
         </div>
@@ -92,6 +97,8 @@ export const HomeNavbar = () => {
           <FontAwesomeIcon icon={faBars} color={colors.primary} width={35} />
         </button>
       </nav>
+
+      {/* 모바일 네비바 인것으로 생각됨. */}
       <div className="navbar-menu hidden fixed top-0 left-0 z-50 w-full h-full bg-coolGray-900 bg-opacity-50">
         <div className="fixed top-0 left-0 bottom-0 w-full w-4/6 max-w-xs bg-white">
           <nav className="relative p-6 h-full overflow-y-auto">
