@@ -46,7 +46,7 @@ export default function Login({
     });
 
     if (error) {
-      console.log("error : ", error);
+      console.log("error : ", new Date().toLocaleTimeString(), error);
       return redirect("/login?message=Could_not_authenticate_user");
     }
     // alert("check your email and verify authentication code")
@@ -86,16 +86,25 @@ export default function Login({
               >
                 Sign In
               </SubmitButton>
-              <SubmitButton
+              <p className="text-center text-sm font-light text-gray-500 dark:text-gray-400">
+                Don't you have an account yet?{" "}
+                <Link href={"/signup"} className="font-medium text-primary-600 hover:underline dark:text-primary-500">
+                  Sign Up here
+                </Link>
+                {/* <a
+                  href="#"
+                  className="font-medium text-primary-600 hover:underline dark:text-primary-500"
+                >
+                  Sign Up
+                </a> */}
+              </p>
+              {/* <SubmitButton
                 formAction={signUp}
                 className="border border-foreground/20 rounded-md px-4 py-2 text-foreground mb-2"
                 pendingText="Signing Up..."
               >
                 Sign Up
-              </SubmitButton>
-              <hr />
-              <p>※ 비밀번호 6자리 이상</p>
-              <p>※ 이메일 인증 후 로그인가능</p>
+              </SubmitButton> */}
               {searchParams?.message && (
                 <p className="mt-4 p-4 bg-foreground/10 text-foreground text-center">
                   {searchParams.message}
@@ -106,6 +115,9 @@ export default function Login({
           </div>
         </div>
       </div>
+
+      {/* footer 밑에 빈공간 제거용 */}
+      <div style={{ marginBottom: 25 }}></div>
     </section>
   );
 }

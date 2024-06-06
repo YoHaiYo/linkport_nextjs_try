@@ -61,7 +61,9 @@ NEXT_PUBLIC_SUPABASE_ANON_KEY=
 ### 다음 작업예정
 
 - 배포 버전에서 네비바에 로그인 버튼 안뜨는 문제 (SSR 문제일듯함)
-- 회원가입 이메일 인증 후에 protect페이지로 이동하는 이슈 해결하기
+- 회원가입 이메일 인증 후에 protect페이지로 이동하는 이슈 해결하기 
+-> /app/auth/callback 에서 redirect 수정하였음. 해결됬는지는 확인필요!
+
 - 코드구조 뜯어보고 깔끔하게 정리해서 보일러플레이트로 만들기
 - url 저장 형태로 UI, DB 구축하기
 - google, github로 로그인

@@ -184,6 +184,12 @@ export const HomeFooter = () => {
                   https://vercel.com/
                 </a>
               </li>
+              <li>
+                <b className="mr-1">Supabase</b>
+                <a href="https://supabase.com/" target="_blank">
+                  https://supabase.com/
+                </a>
+              </li>
             </ul>
           </div>
         </div>
