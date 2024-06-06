@@ -24,15 +24,15 @@ NEXT_PUBLIC_SUPABASE_ANON_KEY=
 
 ```
 <section className="py-24 bg-white overflow-hidden">
-      <div className="container px-4 mx-auto">
-        <div className="flex justify-center flex-wrap -mx-4">
-          <div className="w-full md:w-1/2 px-4">
-            {/* contents */}
-            {/* /contents */}
-          </div>
-        </div>
+  <div className="container px-4 mx-auto">
+    <div className="flex justify-center flex-wrap -mx-4">
+      <div className="w-full md:w-1/2 px-4">
+        {/* contents */}
+        {/* /contents */}
       </div>
-    </section>
+    </div>
+  </div>
+</section>
 ```
 
 - DB테이블은 'linkport' 사용중 (24.06.04)
