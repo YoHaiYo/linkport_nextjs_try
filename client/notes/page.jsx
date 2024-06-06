@@ -1,4 +1,5 @@
 "use client"
+
 import { createClient } from '@/utils/supabase/client'; // @는 app폴더 밖을 의미
 import { useState, useEffect } from 'react';
 import './style/style.css';
@@ -117,6 +118,8 @@ export default function Notes({ userid, useremail }) {
     return (
       <>
         <input
+          id={`edit-title-${note.id}`}
+          name="title"
           className='border'
           style={{ width: 200 }}
           type="text"
@@ -125,6 +128,8 @@ export default function Notes({ userid, useremail }) {
           placeholder="Title"
         />
         <input
+          id={`edit-url-${note.id}`}
+          name="url"
           className='border'
           style={{ width: 200 }}
           type="text"
@@ -133,6 +138,8 @@ export default function Notes({ userid, useremail }) {
           placeholder="URL"
         />
         <input
+          id={`edit-desc-${note.id}`}
+          name="desc"
           className='border'
           style={{ width: 200 }}
           type="text"
@@ -151,6 +158,8 @@ export default function Notes({ userid, useremail }) {
       <h1 className='font-bold mb-2'>My Notes</h1>
       <div className='flex mb-5'>
         <input
+          id="add-title"
+          name="title"
           className='border'
           type="text"
           value={addTitle}
@@ -158,6 +167,8 @@ export default function Notes({ userid, useremail }) {
           placeholder="Title"
         />
         <input
+          id="add-url"
+          name="url"
           className='border'
           type="text"
           value={addUrl}
@@ -165,6 +176,8 @@ export default function Notes({ userid, useremail }) {
           placeholder="URL"
         />
         <input
+          id="add-desc"
+          name="desc"
           className='border'
           type="text"
           value={addDesc}
