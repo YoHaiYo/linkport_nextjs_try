@@ -38,7 +38,7 @@ export default function RootLayout({
   const isSupabaseConnected = canInitSupabaseClient();
   return (
     <html lang="en" className={GeistSans.className}>
-      <body className="text-foreground">
+      <body className="text-foreground overflow-x-hidden">
         <HomeNavbar />
         <main>{children}</main>
         <HomeFooter />

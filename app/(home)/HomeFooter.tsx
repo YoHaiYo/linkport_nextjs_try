@@ -163,30 +163,30 @@ export const HomeFooter = () => {
           {/* Copyright information */}
           <div className="mb-6 flex justify-center">
             <ul className="text-left">
-              <li>
+              <li className="flex flex-col flex-wrap">
                 <b className="mr-1">Deploy</b>
-                <a href="https://linkport-nextjs-try.vercel.app/" target="_blank">
+                <a className="truncate" href="https://linkport-nextjs-try.vercel.app/" target="_blank">
                   https://linkport-nextjs-try.vercel.app/
                 </a>
               </li>
-              <li>
+              <li className="flex flex-col flex-wrap">
                 <b className="mr-1">github</b>
-                <a
+                <a className="truncate"
                   href="https://github.com/YoHaiYo/linkport_nextjs_try"
                   target="_blank"
                 >
                   https://github.com/YoHaiYo/linkport_nextjs_try
                 </a>
               </li>
-              <li>
+              <li className="flex flex-col flex-wrap">
                 <b className="mr-1">Vercel</b>
-                <a href="https://vercel.com/" target="_blank">
+                <a className="truncate" href="https://vercel.com/" target="_blank">
                   https://vercel.com/
                 </a>
               </li>
-              <li>
+              <li className="flex flex-col flex-wrap">
                 <b className="mr-1">Supabase</b>
-                <a href="https://supabase.com/" target="_blank">
+                <a className="truncate" href="https://supabase.com/" target="_blank">
                   https://supabase.com/
                 </a>
               </li>
