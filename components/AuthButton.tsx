@@ -1,4 +1,5 @@
 import { createClient } from "@/utils/supabase/server";
+// import { createClient } from "@/utils/supabase/client";
 import { colors } from "@/utils/theme/colors";
 import Link from "next/link";
 import { redirect } from "next/navigation";

@@ -1,6 +1,7 @@
 
 import { headers } from "next/headers";
 import { createClient } from "@/utils/supabase/server";
+// import { createClient } from "@/utils/supabase/client";
 import { redirect } from "next/navigation";
 import { SubmitButton } from "../login/submit-button";
 import Link from "next/link";

@@ -1,17 +1,14 @@
-import AuthButton from "@/components/AuthButton";
-import HomeButton from "@/components/HomeButton";
-import { ExampleComponent2 } from "@/components/templet/ExampleComponent2";
-import { createClient } from "@/utils/supabase/server";
+// "use client"
 
+import AuthButton from "@/components/AuthButton";
+import { createClient } from "@/utils/supabase/server";
 import { colors } from "@/utils/theme/colors";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Link from "next/link";
-// import { useState } from "react";
+import { useState } from "react";
 
 const canInitSupabaseClient = () => {
-  // This function is just for the interactive tutorial.
-  // Feel free to remove it once you have Supabase connected.
   try {
     createClient();
     return true;
@@ -25,7 +22,6 @@ const isSupabaseConnected = canInitSupabaseClient();
 console.log("isSupabaseConnected : ", isSupabaseConnected)
 
 export const HomeNavbar = () => {
-  // const [menuVisible, setMenuVisible] = useState(false);
 
   return (
     <section className="bg-white">
@@ -37,7 +33,6 @@ export const HomeNavbar = () => {
               <img className="h-8" src="/svg/flex-ui-violet-light.svg" alt="" />
             </Link>
           </div>
-          {/* <ExampleComponent2 /> */}
           <div className="hidden xl:block xl:w-1/3">
             <ul className="flex justify-center">
               <li className="mr-12">
@@ -85,9 +80,8 @@ export const HomeNavbar = () => {
         <button
           id="hamburger"
           className="navbar-burger self-center xl:hidden"
-        // onClick={() => { setMenuVisible(!menuVisible) }}
         >
-          <FontAwesomeIcon icon={faBars} color={colors.primary} width={35} />
+          <FontAwesomeIcon icon={faBars} color={colors.primary} style={{ height: 40 }} />
         </button>
       </nav>
 
