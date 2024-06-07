@@ -1,5 +1,5 @@
 import FetchCP from "./FetchCP";
-import ServerCP from "./FetchCP";
+import FetchSupabaseCP from "./FetchSupabaseCP";
 
 export default function Test() {
   return (
@@ -9,6 +9,7 @@ export default function Test() {
           <div className="w-full md:w-1/2 px-4">
             {/* contents */}
             <FetchCP />
+            <FetchSupabaseCP />
             {/* /contents */}
           </div>
         </div>
