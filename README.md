@@ -63,6 +63,9 @@ NEXT_PUBLIC_SUPABASE_ANON_KEY=
 - 지원 안되는 배턴 : 클라이언트 컴포넌트에 서버 컴포넌트 임포트. 반대로 서버 컴포넌트에서 클라이언트 컴포넌트에 임포트 또한 안됨.
 - 지원 되는 배턴(★) : 서버컴포넌트에서 props로 클라이언트 컴포넌트에 전달해서 섞는 방법은 가능함..!
 
+### nextjs에서 api 호출
+- 클라이언트 사이드 : useEffect이용. [공식문서 링크](https://nextjs.org/docs/pages/building-your-application/data-fetching/client-side)
+
 ### 발생한 이슈
 - HomeNavBar에서 로그인 메뉴는 SSR인데 햄버거버튼은 CSR로 해야됨. 어떻게 분리할지고민 or 전역상태관리로 해결할 수 있을지 고민하기(Redux)
 

@@ -17,6 +17,11 @@ export default function Test() {
                   2 : createContext
                 </Link>
               </li>
+              <li>
+                <Link href={"test/3"}>
+                  3 : api/fetch
+                </Link>
+              </li>
             </ul>
           </div>
         </div>
