@@ -27,6 +27,11 @@ export default function Test() {
                   4 : AuthButton 클라이언트와 분리
                 </Link>
               </li>
+              <li>
+                <Link href={"test/5"}>
+                  5 : Zustand
+                </Link>
+              </li>
             </ul>
           </div>
         </div>
