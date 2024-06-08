@@ -4,7 +4,7 @@ import { createClient } from "@/utils/supabase/server";
 import FetchDataSteps from "@/components/tutorial/FetchDataSteps";
 import Header from "@/components/Header";
 import { redirect } from "next/navigation";
-import Notes from "@/client/notes/page"
+import Notes from "./Notes"
 
 export default async function DashboardPage() {
   const supabase = createClient();
