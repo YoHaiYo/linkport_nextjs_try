@@ -27,12 +27,13 @@ export const HomeNavbar = () => {
     <section className="bg-white">
       <nav className="flex justify-between p-6 px-4">
         <div className="flex justify-between items-center w-full">
+          {/* 로고 */}
           <div className="xl:w-1/3">
-            {/* home 버튼 */}
             <Link className="block max-w-max" href="/">
               <img className="h-8" src="/svg/flex-ui-violet-light.svg" alt="" />
             </Link>
           </div>
+          {/* 네비메뉴 */}
           <div className="hidden xl:block xl:w-1/3">
             <ul className="flex justify-center">
               <li className="mr-12">
@@ -69,6 +70,7 @@ export const HomeNavbar = () => {
               </li>
             </ul>
           </div>
+          {/* 로그인 */}
           <div className="hidden xl:block xl:w-1/3">
             <div className="flex items-center justify-end">
               {/* {isSupabaseConnected && <AuthButton />} */}

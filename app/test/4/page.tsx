@@ -1,6 +1,5 @@
 
-import FetchCP from "./FetchCP";
-import FetchSupabaseCP from "./FetchSupabaseCP";
+import AuthSeparate from "./AuthSeparate";
 
 export default function Test() {
   return (
@@ -9,9 +8,7 @@ export default function Test() {
         <div className="flex justify-center flex-wrap -mx-4">
           <div className="w-full md:w-1/2 px-4">
             {/* contents */}
-            <FetchCP />
-            <hr />
-            <FetchSupabaseCP />
+            <AuthSeparate />
             {/* /contents */}
           </div>
         </div>

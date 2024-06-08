@@ -4,7 +4,7 @@ import { colors } from "@/utils/theme/colors";
 import Link from "next/link";
 import { redirect } from "next/navigation";
 
-export default async function FetchSupabaseCP() {
+export default async function AuthSeparate() {
   const supabase = createClient();
 
   // 로그인 성공시 user info의 데이터를 가져오고 객체로 할당함
