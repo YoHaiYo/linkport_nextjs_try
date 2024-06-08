@@ -1,12 +1,110 @@
+// pages/notes.js
 "use client"
 
 import { createClient } from '@/utils/supabase/client'; // @는 app폴더 밖을 의미
 import { useState, useEffect } from 'react';
+import Link from "next/link";
 import './style/style.css';
 
 const tablename = "notes"; // 여기서 supabase 테이블명 일괄조절하기
 
 const supabase = createClient();
+
+const EditBeforeNote = ({ note, setUpdateNoteId, setNewTitle, setNewUrl, setNewDesc, handleDelete }) => (
+  <>
+    {/* buttons */}
+    <div className="flex justify-end text-gray-100">
+      <button className="edit bg-green-500 px-2 mx-1 rounded-md" onClick={() => {
+        setUpdateNoteId(note.id);
+        setNewTitle(note.title);
+        setNewUrl(note.url);
+        setNewDesc(note.desc);
+      }}>Edit</button>
+      <button className="delete bg-red-500 px-2 mx-1 rounded-md" onClick={() => handleDelete(note.id)}>Delete</button>
+      <a className="delete bg-blue-500 px-2 mx-1 rounded-md" href={`http://${note.url}`} target='_blank'>Go</a>
+    </div>
+    {/* contents */}
+    <h3 className="font-bold text-gray-600">title : {note.title}</h3>
+    <p className="mt-3 text-gray-600">url : {note.url}</p>
+    <p className="mt-3 text-gray-600">desc : {note.desc}</p>
+  </>
+);
+
+const EditAfterNote = ({ note, newTitle, setNewTitle, newUrl, setNewUrl, newDesc, setNewDesc, handleUpdate, handleDelete }) => (
+  <>
+    {/* buttons */}
+    <div className="flex justify-end text-gray-100">
+      <button button className="update bg-green-500 rounded-md" onClick={() => handleUpdate(note.id)}>Update</button>
+      <button className="delete bg-red-500 px-2 mx-1 rounded-md" onClick={() => handleDelete(note.id)}>Delete</button>
+      <a className="delete bg-blue-500 px-2 mx-1 rounded-md" href={`http://${note.url}`} target='_blank'>Go</a>
+    </div>
+    {/* contents */}
+    <input
+      id={`edit-title-${note.id}`}
+      name="title"
+      className="border text-gray-600"
+      style={{ width: "auto" }}
+      type="text"
+      value={newTitle}
+      onChange={(e) => setNewTitle(e.target.value)}
+      placeholder="Title"
+    />
+    <input
+      id={`edit-url-${note.id}`}
+      name="url"
+      className="mt-3 border text-gray-600"
+      style={{ width: 200 }}
+      type="text"
+      value={newUrl}
+      onChange={(e) => setNewUrl(e.target.value)}
+      placeholder="URL"
+    />
+    <input
+      id={`edit-desc-${note.id}`}
+      name="desc"
+      className="mt-3 border text-gray-600"
+      style={{ width: 200 }}
+      type="text"
+      value={newDesc}
+      onChange={(e) => setNewDesc(e.target.value)}
+      placeholder="Description"
+    />
+  </>
+);
+
+const Card = ({ note, updateNoteId, setUpdateNoteId, setNewTitle, setNewUrl, setNewDesc, handleDelete, handleUpdate, newTitle, newUrl, newDesc }) => {
+  return (
+    <div className="relative">
+      <div className="absolute -inset-1">
+        <div className="w-full h-full rotate-180 opacity-30 blur-lg filter bg-gradient-to-r from-yellow-400 via-pink-500 to-green-600"></div>
+      </div>
+      <div className="relative overflow-hidden bg-white shadow-md rounded-xl h-full p-3">
+        {updateNoteId === note.id ? (
+          <EditAfterNote
+            note={note}
+            newTitle={newTitle}
+            setNewTitle={setNewTitle}
+            newUrl={newUrl}
+            setNewUrl={setNewUrl}
+            newDesc={newDesc}
+            setNewDesc={setNewDesc}
+            handleUpdate={handleUpdate}
+            handleDelete={handleDelete}
+          />
+        ) : (
+          <EditBeforeNote
+            note={note}
+            setUpdateNoteId={setUpdateNoteId}
+            setNewTitle={setNewTitle}
+            setNewUrl={setNewUrl}
+            setNewDesc={setNewDesc}
+            handleDelete={handleDelete}
+          />
+        )}
+      </div>
+    </div>
+  );
+};
 
 export default function Notes({ userid, useremail }) {
   const [notes, setNotes] = useState([]);
@@ -18,7 +116,6 @@ export default function Notes({ userid, useremail }) {
   const [addUrl, setAddUrl] = useState("");
   const [addDesc, setAddDesc] = useState("");
 
-  // Fetch notes on component mount
   useEffect(() => {
     const fetchNotes = async () => {
       const { data: notes, error } = await supabase
@@ -36,7 +133,6 @@ export default function Notes({ userid, useremail }) {
     fetchNotes();
   }, [userid]);  // Depend on userid to refetch when it changes
 
-  // Update note title, url, and desc
   const handleUpdate = async (id) => {
     const { error } = await supabase
       .from(tablename)
@@ -59,7 +155,6 @@ export default function Notes({ userid, useremail }) {
     }
   };
 
-  // Delete note
   const handleDelete = async (id) => {
     const { error } = await supabase
       .from(tablename)
@@ -74,7 +169,6 @@ export default function Notes({ userid, useremail }) {
     }
   };
 
-  // Add new note
   const handleAdd = async () => {
     const { data, error } = await supabase
       .from(tablename)
@@ -91,133 +185,72 @@ export default function Notes({ userid, useremail }) {
     }
   };
 
-  // Edit 누르기전
-  const EditBeforeNote = ({ note, setUpdateNoteId, setNewTitle, setNewUrl, setNewDesc, handleDelete }) => {
-    return (
-      <>
-        <div className='flex-column'>
-          <div>{note.title}</div>
-          <div>{note.url}</div>
-          <div>{note.desc}</div>
-        </div>
-        <div className='absolute bottom-100 right-0'>
-          <button className='edit px-2 mx-1' onClick={() => {
-            setUpdateNoteId(note.id);
-            setNewTitle(note.title);
-            setNewUrl(note.url);
-            setNewDesc(note.desc);
-          }}>Edit</button>
-          <button className='delete px-2 mx-1' onClick={() => handleDelete(note.id)}>Delete</button>
-        </div>
-      </>
-    );
-  };
-
-  // Edit 누른후
-  const EditAfterNote = ({ note, newTitle, setNewTitle, newUrl, setNewUrl, newDesc, setNewDesc, handleUpdate, handleDelete }) => {
-    return (
-      <>
-        <input
-          id={`edit-title-${note.id}`}
-          name="title"
-          className='border'
-          style={{ width: 200 }}
-          type="text"
-          value={newTitle}
-          onChange={(e) => setNewTitle(e.target.value)}
-          placeholder="Title"
-        />
-        <input
-          id={`edit-url-${note.id}`}
-          name="url"
-          className='border'
-          style={{ width: 200 }}
-          type="text"
-          value={newUrl}
-          onChange={(e) => setNewUrl(e.target.value)}
-          placeholder="URL"
-        />
-        <input
-          id={`edit-desc-${note.id}`}
-          name="desc"
-          className='border'
-          style={{ width: 200 }}
-          type="text"
-          value={newDesc}
-          onChange={(e) => setNewDesc(e.target.value)}
-          placeholder="Description"
-        />
-        <button className='update' onClick={() => handleUpdate(note.id)}>Update</button>
-        <button className='delete px-2 mx-1' onClick={() => handleDelete(note.id)}>Delete</button>
-      </>
-    );
-  };
-
   return (
-    <div id='note'>
-      <h1 className='font-bold mb-2'>{useremail}'s Notes</h1>
-      <div className='flex mb-5'>
-        <input
-          id="add-title"
-          name="title"
-          className='border'
-          type="text"
-          value={addTitle}
-          onChange={(e) => setAddTitle(e.target.value)}
-          placeholder="Title"
-        />
-        <input
-          id="add-url"
-          name="url"
-          className='border'
-          type="text"
-          value={addUrl}
-          onChange={(e) => setAddUrl(e.target.value)}
-          placeholder="URL"
-        />
-        <input
-          id="add-desc"
-          name="desc"
-          className='border'
-          type="text"
-          value={addDesc}
-          onChange={(e) => setAddDesc(e.target.value)}
-          placeholder="Description"
-        />
-        <button className='write px-2' onClick={handleAdd}>Add</button>
-      </div>
-      {/* 카드 부분 */}
-      {notes.map((note, idx) => (
-        <div key={note.id}>
-          <p>{idx + 1})</p>
-          <article className='relative mb-2'>
-            <div className='flex justify-between border p-2'>
-              {updateNoteId === note.id ? (
-                <EditAfterNote
-                  note={note}
-                  newTitle={newTitle}
-                  setNewTitle={setNewTitle}
-                  newUrl={newUrl}
-                  setNewUrl={setNewUrl}
-                  newDesc={newDesc}
-                  setNewDesc={setNewDesc}
-                  handleUpdate={handleUpdate}
-                  handleDelete={handleDelete}
-                />
-              ) : (
-                <EditBeforeNote
-                  note={note}
-                  setUpdateNoteId={setUpdateNoteId}
-                  setNewTitle={setNewTitle}
-                  setNewUrl={setNewUrl}
-                  setNewDesc={setNewDesc}
-                  handleDelete={handleDelete}
-                />
-              )}
-            </div>
-          </article>
+    <section
+      className="py-12 bg-gray-900xx text-gray-600 sm:py-12 lg:py-16"
+      style={{
+        backgroundImage: 'url("/svg/pattern-white.svg")',
+        backgroundPosition: "center",
+      }}
+    >
+      <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+        <div className="max-w-xl mx-auto text-center xl:max-w-2xl">
+          <h2 className="text-2xl font-bold leading-tight text-gray-900 sm:text-3xl xl:text-4xl mb-6">
+            {useremail}'s Notes
+          </h2>
+          <p className="mb-4 text-gray-900">
+            Please add url to make a card!
+          </p>
         </div>
-      ))}
-    </div>
+        <div className="flex mb-5 p-3 justify-center">
+          <input
+            id="add-title"
+            name="title"
+            className="border border-gray-400 text-gray-600"
+            type="text"
+            value={addTitle}
+            onChange={(e) => setAddTitle(e.target.value)}
+            placeholder="Title"
+          />
+          <input
+            id="add-url"
+            name="url"
+            className="border border-gray-400 text-gray-600"
+            type="text"
+            value={addUrl}
+            onChange={(e) => setAddUrl(e.target.value)}
+            placeholder="URL"
+          />
+          <input
+            id="add-desc"
+            name="desc"
+            className="border border-gray-400 text-gray-600"
+            type="text"
+            value={addDesc}
+            onChange={(e) => setAddDesc(e.target.value)}
+            placeholder="Description"
+          />
+          <button className="write bg-violet-500 text-gray-100 px-2" onClick={handleAdd}>Add</button>
+        </div>
+        <div className="grid lg:grid-cols-4 md:grid-cols-4 sm:grid-cols-2 grid-cols-1 max-w-4xl lg:max-w-6xl mx-auto mt-8 text-center gap-y-4 sm:gap-x-8 sm:mt-12 lg:mt-20 sm:text-left">
+          {notes.map((note) => (
+            <Card
+              key={note.id}
+              note={note}
+              updateNoteId={updateNoteId}
+              setUpdateNoteId={setUpdateNoteId}
+              setNewTitle={setNewTitle}
+              setNewUrl={setNewUrl}
+              setNewDesc={setNewDesc}
+              handleDelete={handleDelete}
+              handleUpdate={handleUpdate}
+              newTitle={newTitle}
+              newUrl={newUrl}
+              newDesc={newDesc}
+            />
+          ))}
+        </div>
+      </div>
+    </section>
   );
 }

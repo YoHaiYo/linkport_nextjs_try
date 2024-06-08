@@ -32,6 +32,11 @@ export default function Test() {
                   5 : Zustand
                 </Link>
               </li>
+              <li>
+                <Link href={"test/6"}>
+                  6 : dashboard UI
+                </Link>
+              </li>
             </ul>
           </div>
         </div>
