@@ -10,11 +10,11 @@ export const HamburgerBtn = () => {
   const [visible, setVisible] = useState(false)
 
   return (
-    <div className="xl:hidden">
+    <>
       <button
-        id="hamburger"
+        id="hamburgerss"
         className="navbar-burger self-center xl:hidden"
-        onClick={() => { setVisible(!visible) }} className="navbar-close absolutexxx top-5xxx p-4xxx right-3xxx" href="#"
+        onClick={() => { setVisible(!visible) }} href="#"
       >
         <FontAwesomeIcon icon={faBars} color={"red"} style={{ height: 40 }} />
       </button>
@@ -86,6 +86,6 @@ export const HamburgerBtn = () => {
           </a>
         </div>
       </div>
-    </div>
+    </>
   )
 }
