@@ -14,7 +14,7 @@ export const HamburgerBtn = () => {
       <button
         id="hamburgerss"
         className="navbar-burger self-center xl:hidden"
-        onClick={() => { setVisible(!visible) }} href="#"
+        onClick={() => { setVisible(!visible) }}
       >
         <FontAwesomeIcon icon={faBars} color={"red"} style={{ height: 40 }} />
       </button>
