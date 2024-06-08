@@ -6,6 +6,7 @@ import { HomeFeatures } from "./(home)/HomeFeatures";
 import { HomeHowWorks } from "./(home)/HomeHowWorks";
 import { HomePricing } from "./(home)/HomePricing";
 import { ExampleComponent2 } from "@/components/templet/ExampleComponent2";
+import AuthButton from "@/components/AuthButton";
 
 export default function Index() {
   // const canInitSupabaseClient = () => {

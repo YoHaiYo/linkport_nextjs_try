@@ -39,6 +39,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={GeistSans.className}>
       <body className="text-foregroundxxx overflow-x-hidden">
+        {/* <AuthButton />s */}
         <HomeNavbar />
         <main>{children}</main>
         <HomeFooter />

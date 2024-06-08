@@ -1,99 +1,24 @@
-// "use client"
+"use client"
+import { colors } from '@/utils/theme/colors'
+import { faBars } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import React, { useState } from 'react'
 
-import AuthButton from "@/components/AuthButton";
-import { createClient } from "@/utils/supabase/server";
-import { colors } from "@/utils/theme/colors";
-import { faBars } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import Link from "next/link";
-import { useState } from "react";
-import HomeNavHamburger from "./HomeNavbarContent/HomeNavHamburger";
-
-const canInitSupabaseClient = () => {
-  try {
-    createClient();
-    return true;
-  } catch (e) {
-    return false;
-  }
-};
-
-const isSupabaseConnected = canInitSupabaseClient();
-
-console.log("isSupabaseConnected : ", isSupabaseConnected)
-
-export const HomeNavbar = () => {
-
+export default function HomeNavHamburger() {
+  const [visible, setVisible] = useState(false)
   return (
-    <section className="bg-white">
-      <nav className="flex justify-between p-6 px-4">
-        <div className="flex justify-between items-center w-full">
-          {/* 로고 */}
-          <div className="xl:w-1/3">
-            <Link className="block max-w-max" href="/">
-              <img className="h-8" src="/svg/flex-ui-violet-light.svg" alt="" />
-            </Link>
-          </div>
-          {/* 네비메뉴 */}
-          <div className="hidden xl:block xl:w-1/3">
-            <ul className="flex justify-center">
-              <li className="mr-12">
-                <a
-                  className="text-coolGray-500 hover:text-coolGray-900 font-medium"
-                  href="#"
-                >
-                  Product
-                </a>
-              </li>
-              <li className="mr-12">
-                <a
-                  className="text-coolGray-500 hover:text-coolGray-900 font-medium"
-                  href="#"
-                >
-                  Features
-                </a>
-              </li>
-              <li className="mr-12">
-                <a
-                  className="text-coolGray-500 hover:text-coolGray-900 font-medium"
-                  href="#"
-                >
-                  Resources
-                </a>
-              </li>
-              <li>
-                <a
-                  className="text-coolGray-500 hover:text-coolGray-900 font-medium"
-                  href="#"
-                >
-                  Pricing
-                </a>
-              </li>
-            </ul>
-          </div>
-          {/* 로그인 */}
-          <div className="hidden xl:block xl:w-1/3">
-            <div className="flex items-center justify-end">
-              {/* {isSupabaseConnected && <AuthButton />} */}
-              {/* isSupabaseConnected가 안들어와서 배포판에서 로그인안나옴. 임시해결용 */}
-              <AuthButton />
-            </div>
-          </div>
-        </div>
+    <>
+      <button
+        id="hamburger"
+        className="navbar-burger self-center xl:hidden"
+        onClick={() => { setVisible(!visible) }}
+      >
+        <FontAwesomeIcon icon={faBars} color={colors.primary} style={{ height: 40 }} />
+      </button>
 
-        <HomeNavHamburger />
-        {/* <button
-          id="hamburger"
-          className="navbar-burger self-center xl:hidden"
-        >
-          <FontAwesomeIcon icon={faBars} color={colors.primary} style={{ height: 40 }} />
-        </button> */}
-      </nav>
-
-      {/* 모바일 네비바 인것으로 생각됨. */}
-      {<div className="navbar-menu hidden fixed top-0 left-0 z-50 w-full h-full bg-coolGray-900 bg-opacity-50">
+      {visible && <div className="navbar-menu fixed top-0 left-0 z-50 h-full bg-coolGray-900 bg-opacity-50">
         <div className="fixed top-0 left-0 bottom-0 w-full w-4/6 max-w-xs bg-white">
-          <nav className="relative p-6 h-full overflow-y-auto">
+          <nav className="relative border p-6 h-full overflow-y-auto">
             <div className="flex flex-col justify-between h-full">
               <a className="inline-block" href="#">
                 <img
@@ -156,7 +81,9 @@ export const HomeNavbar = () => {
               </div>
             </div>
           </nav>
-          <a className="navbar-close absolute top-5 p-4 right-3" href="#">
+          <button
+            onClick={() => { setVisible(false) }}
+            className="navbar-close absolute top-5 p-4 right-3">
             <svg
               width={12}
               height={12}
@@ -169,9 +96,9 @@ export const HomeNavbar = () => {
                 fill="#556987"
               />
             </svg>
-          </a>
+          </button>
         </div>
       </div>}
-    </section>
-  );
-};
+    </>
+  )
+}

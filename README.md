@@ -77,6 +77,7 @@ NEXT_PUBLIC_SUPABASE_ANON_KEY=
 
 ### 발생한 이슈
 - HomeNavBar에서 로그인 메뉴는 SSR인데 햄버거버튼은 CSR로 해야됨. 어떻게 분리할지고민 or 전역상태관리로 해결할 수 있을지 고민하기(Redux)
+-> 아예 최상단으로 빼서 따로 관리하는게 가장간단해보임
 
 - 배포 버전에서 네비바에 로그인 버튼 안뜨는 문제 (SSR 문제일듯함)
 -> isSupabaseConnected가 안들어와서 배포판에서 로그인안나옴. 임시해결용으로 isSupabaseConnected없어도 나오게 설정함. (HomeNavbar.tsx)
