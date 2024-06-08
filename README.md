@@ -64,9 +64,12 @@ NEXT_PUBLIC_SUPABASE_ANON_KEY=
 - 지원 되는 배턴(★) : 서버컴포넌트에서 props로 클라이언트 컴포넌트에 전달해서 섞는 방법은 가능함..!
 
 ### 서버, 클라이언트 컴포넌트 분리 생각정리
-`서버 컴포넌트` 가 있는 `부모 컴포넌트`에서 `useState` 등 동적요소 훅을 사용해여되는 상황이오면 
+- `서버 컴포넌트` 가 있는 `부모 컴포넌트`에서 `useState` 등 동적요소 훅을 사용해여되는 상황이오면 
 분리시킬 생각부터하자. `부모 컴포넌트`를 `서버 컴포넌트`와 `클라이언트 컴포넌트`로 쪼갠다. 
 그 다음 `클라이언트 컴포넌트` 에서 `useState`를 사용하자.
+- `page.tsx`에서 분리된 `클라이언트 컴포넌트`과 `서버 컴포넌트`를 import하자. 
+이때 `page.tsx`에서 `"use client"`를 선언하면 오류발생한다.
+`클라이언트 컴포넌트`로 가서 `"use client"`를 선언하고 사용하면된다. 
 
 ### nextjs에서 api 호출
 - 클라이언트 사이드 : useEffect이용. [공식문서 링크](https://nextjs.org/docs/pages/building-your-application/data-fetching/client-side)
