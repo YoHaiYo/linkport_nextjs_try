@@ -1,21 +1,9 @@
 "use client"
-import AuthButton from "@/components/AuthButton"
+// import AuthButton from "@/components/AuthButton"
 import { colors } from "@/utils/theme/colors"
 import { faBars } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { useState } from "react"
-
-function Logo() {
-  const [visible, setVisible] = useState(false)
-  return (
-    <div className="xl:w-1/3">
-      <button onClick={() => { setVisible(!visible) }}>Click!</button>
-      {visible && <Link className="block max-w-max" href="/">
-        <img className="h-8" src="/svg/flex-ui-violet-light.svg" alt="" />
-      </Link>}
-    </div>
-  )
-}
 
 
 export const HamburgerBtn = () => {
