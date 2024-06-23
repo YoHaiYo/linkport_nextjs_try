@@ -5,6 +5,9 @@ import { createClient } from '@/utils/supabase/client'; // @는 app폴더 밖을
 import { useState, useEffect } from 'react';
 import Link from "next/link";
 import './style/style.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCheck, faDeleteLeft, faEdit, faStar, faTrash } from '@fortawesome/free-solid-svg-icons';
+import { colors } from '@/utils/theme/colors';
 
 const tablename = "notes"; // 여기서 supabase 테이블명 일괄조절하기
 
@@ -13,20 +16,34 @@ const supabase = createClient();
 const EditBeforeNote = ({ note, setUpdateNoteId, setNewTitle, setNewUrl, setNewDesc, handleDelete }) => (
   <>
     {/* buttons */}
-    <div className="flex justify-end text-gray-100">
-      <button className="edit bg-green-500 px-2 mx-1 rounded-md" onClick={() => {
-        setUpdateNoteId(note.id);
-        setNewTitle(note.title);
-        setNewUrl(note.url);
-        setNewDesc(note.desc);
-      }}>Edit</button>
-      <button className="delete bg-red-500 px-2 mx-1 rounded-md" onClick={() => handleDelete(note.id)}>Delete</button>
-      <a className="delete bg-blue-500 px-2 mx-1 rounded-md" href={`http://${note.url}`} target='_blank'>Go</a>
+    <div className="flex justify-between text-gray-100">
+      {/* 즐겨찾기 */}
+      <FontAwesomeIcon
+        className='cursor-pointer text-gray-300 hover:text-blue-500'
+        icon={faStar}
+      />
+      {/* 타이틀 */}
+      <h3 className="font-bold text-gray-600">{note.title ? note.title : "Edit title !"}</h3>
+      {/* 수정 */}
+      <FontAwesomeIcon
+        className='cursor-pointer text-gray-300 hover:text-violet-500'
+        icon={faEdit} onClick={() => {
+          setUpdateNoteId(note.id);
+          setNewTitle(note.title);
+          setNewUrl(note.url);
+          setNewDesc(note.desc);
+        }}
+      />
+      {/* <button className="delete bg-red-500 px-2 mx-1 rounded-md" onClick={() => handleDelete(note.id)}>Delete</button> */}
+      {/* <a className="delete bg-blue-500 px-2 mx-1 rounded-md" href={`http://${note.url}`} target='_blank'>Go</a> */}
     </div>
     {/* contents */}
-    <h3 className="font-bold text-gray-600">title : {note.title}</h3>
-    <p className="mt-3 text-gray-600">url : {note.url}</p>
-    <p className="mt-3 text-gray-600">desc : {note.desc}</p>
+
+    <a href={`${note.url}`} target='_blank'>
+
+      <p className="mt-3 text-gray-600">{note.url ? note.url : "URL must needed !"}</p>
+      <p className="mt-3 text-gray-600">{note.desc ? note.desc : "Edit description !"}</p>
+    </a>
   </>
 );
 
@@ -34,9 +51,17 @@ const EditAfterNote = ({ note, newTitle, setNewTitle, newUrl, setNewUrl, newDesc
   <>
     {/* buttons */}
     <div className="flex justify-end text-gray-100">
-      <button button className="update bg-green-500 rounded-md" onClick={() => handleUpdate(note.id)}>Update</button>
-      <button className="delete bg-red-500 px-2 mx-1 rounded-md" onClick={() => handleDelete(note.id)}>Delete</button>
-      <a className="delete bg-blue-500 px-2 mx-1 rounded-md" href={`http://${note.url}`} target='_blank'>Go</a>
+      {/* 삭제 */}
+      <FontAwesomeIcon className='cursor-pointer mr-3 my-1 text-gray-300 hover:text-red-400'
+        icon={faTrash} onClick={() => handleDelete(note.id)}
+      />
+      {/* 업데이트 */}
+      <FontAwesomeIcon className='cursor-pointer my-1 text-gray-300 hover:text-green-400'
+        icon={faCheck} onClick={() => handleUpdate(note.id)}
+      />
+      {/* <button button className="update bg-green-500 rounded-md" onClick={() => handleUpdate(note.id)}>Update</button>
+      <button className="delete bg-red-500 px-2 mx-1 rounded-md" onClick={() => handleDelete(note.id)}>Delete</button> */}
+      {/* <a className="delete bg-blue-500 px-2 mx-1 rounded-md" href={`http://${note.url}`} target='_blank'>Go</a> */}
     </div>
     {/* contents */}
     <input
@@ -78,7 +103,8 @@ const Card = ({ note, updateNoteId, setUpdateNoteId, setNewTitle, setNewUrl, set
       <div className="absolute -inset-1">
         <div className="w-full h-full rotate-180 opacity-30 blur-lg filter bg-gradient-to-r from-yellow-400 via-pink-500 to-green-600"></div>
       </div>
-      <div className="relative overflow-hidden bg-white shadow-md rounded-xl h-full p-3">
+      <div className="relative overflow-hidden bg-white shadow-md rounded-xl h-full p-3"
+      >
         {updateNoteId === note.id ? (
           <EditAfterNote
             note={note}
@@ -202,8 +228,9 @@ export default function Notes({ userid, useremail }) {
             Please add url to make a card!
           </p>
         </div>
-        <div className="flex mb-5 p-3 justify-center">
-          <input
+        {/* add-bar */}
+        <div className="flex mb-1 p-3 justify-center">
+          {/* <input
             id="add-title"
             name="title"
             className="border border-gray-400 text-gray-600"
@@ -211,17 +238,17 @@ export default function Notes({ userid, useremail }) {
             value={addTitle}
             onChange={(e) => setAddTitle(e.target.value)}
             placeholder="Title"
-          />
+          /> */}
           <input
             id="add-url"
             name="url"
-            className="border border-gray-400 text-gray-600"
+            className="w-full md:w-1/2 rounded-tl rounded-bl p-1 border border-gray-400 text-gray-600"
             type="text"
             value={addUrl}
             onChange={(e) => setAddUrl(e.target.value)}
-            placeholder="URL"
+            placeholder="Add your multiple URLs at once!"
           />
-          <input
+          {/* <input
             id="add-desc"
             name="desc"
             className="border border-gray-400 text-gray-600"
@@ -229,10 +256,40 @@ export default function Notes({ userid, useremail }) {
             value={addDesc}
             onChange={(e) => setAddDesc(e.target.value)}
             placeholder="Description"
-          />
-          <button className="write bg-violet-500 text-gray-100 px-2" onClick={handleAdd}>Add</button>
+          /> */}
+          <button className="write rounded-tr rounded-br bg-violet-500 text-gray-100 px-2" onClick={handleAdd}>Add</button>
         </div>
-        <div className="grid lg:grid-cols-4 md:grid-cols-4 sm:grid-cols-2 grid-cols-1 max-w-4xl lg:max-w-6xl mx-auto mt-8 text-center gap-y-4 sm:gap-x-8 sm:mt-12 lg:mt-20 sm:text-left">
+        {/* /add-bar */}
+
+        {/* filter-bar */}
+        <div className="flex mb-1 p-3 justify-end">
+          <div className="w-64 h-11 relative">
+            <div className="w-64 h-11 left-0 top-0 absolute rounded-[10px] border-2 border-violet-500" />
+            <div className="w-[30px] h-[33px] left-[63px] top-[6px] absolute" />
+            <div className="w-[60px] h-[15px] left-[155px] top-[15px] absolute justify-center items-center gap-1 inline-flex">
+              <div className="text-center text-gray-900 text-xs font-normal font-['Inter']">Popular</div>
+              <div className="w-3.5 h-3.5 pl-[1.18px] pr-[1.19px] pt-[2.93px] pb-[4.38px] origin-top-left rotate-180 justify-center items-center flex" />
+            </div>
+            <div className="w-8 h-[15px] left-[112px] top-[15px] absolute justify-center items-center gap-1 inline-flex">
+              <div className="text-center text-gray-900 text-xs font-normal font-['Inter']">All</div>
+              <div className="w-3.5 h-3.5 pl-[1.18px] pr-[1.19px] pt-[2.93px] pb-[4.38px] origin-top-left rotate-180 justify-center items-center flex" />
+            </div>
+            <div className="w-4 h-4 left-[242px] top-[14px] absolute origin-top-left rotate-180 justify-center items-center inline-flex" />
+            <div className="w-[72.50px] h-4 left-[24px] top-[14px] absolute justify-center items-center gap-[9px] inline-flex">
+              <div className="w-4 h-4 relative">
+                <div className="w-[7px] h-1 left-0 top-0 absolute bg-violet-500" />
+                <div className="w-[7px] h-1 left-0 top-[6px] absolute bg-violet-500" />
+                <div className="w-[7px] h-1 left-0 top-[12px] absolute bg-violet-500" />
+                <div className="w-[7px] h-1 left-[9px] top-0 absolute bg-violet-500" />
+                <div className="w-[7px] h-1 left-[9px] top-[6px] absolute bg-violet-500" />
+                <div className="w-[7px] h-1 left-[9px] top-[12px] absolute bg-violet-500" />
+              </div>
+            </div>
+          </div>
+        </div>
+        {/* /filter-bar */}
+
+        <div className="grid lg:grid-cols-4 md:grid-cols-4 sm:grid-cols-2 grid-cols-1 max-w-4xl lg:max-w-6xl mx-auto mt-8 text-center gap-y-4 sm:gap-x-8 sm:text-left">
           {notes.map((note) => (
             <Card
               key={note.id}
