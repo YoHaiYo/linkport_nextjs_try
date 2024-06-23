@@ -8,6 +8,7 @@ import './style/style.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCheck, faDeleteLeft, faEdit, faStar, faTrash } from '@fortawesome/free-solid-svg-icons';
 import { colors } from '@/utils/theme/colors';
+import { DropDown } from '@/components/DropDown';
 
 const tablename = "notes"; // 여기서 supabase 테이블명 일괄조절하기
 
@@ -261,6 +262,7 @@ export default function Notes({ userid, useremail }) {
         </div>
         {/* /add-bar */}
 
+        <DropDown options={['Edit', 'Duplicate', 'Archive']} />
         {/* filter-bar */}
         <div className="flex mb-1 p-3 justify-end">
           <div className="w-64 h-11 relative">
@@ -273,6 +275,8 @@ export default function Notes({ userid, useremail }) {
             <div className="w-8 h-[15px] left-[112px] top-[15px] absolute justify-center items-center gap-1 inline-flex">
               <div className="text-center text-gray-900 text-xs font-normal font-['Inter']">All</div>
               <div className="w-3.5 h-3.5 pl-[1.18px] pr-[1.19px] pt-[2.93px] pb-[4.38px] origin-top-left rotate-180 justify-center items-center flex" />
+
+
             </div>
             <div className="w-4 h-4 left-[242px] top-[14px] absolute origin-top-left rotate-180 justify-center items-center inline-flex" />
             <div className="w-[72.50px] h-4 left-[24px] top-[14px] absolute justify-center items-center gap-[9px] inline-flex">
